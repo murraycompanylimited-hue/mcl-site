@@ -1,5 +1,146 @@
 
-<!DOCTYPE html><!DOCTYPE html><!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html><!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Graceful Concierge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Graceful Concierge - one trusted point of contact for your life, work, and partners. Appointments, updates, and support handled with care.">
+  <style>
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; line-height: 1.6; background-color: #f5f5f5; color: #222; }
+    header { background-color: #111; color: #fff; padding: 16px 24px; }
+    header .brand { font-size: 1.4rem; font-weight: bold; }
+    header .tagline { font-size: 0.9rem; opacity: 0.8; }
+    main { max-width: 960px; margin: 0 auto; padding: 24px 16px 48px; }
+    .hero { background-color: #ffffff; padding: 24px 24px 32px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.08); margin-bottom: 24px; }
+    .hero h1 { margin-top: 0; font-size: 2rem; }
+    .hero p.lead { font-size: 1.05rem; margin-bottom: 16px; }
+    .highlight { font-weight: bold; }
+    .section { background-color: #ffffff; padding: 24px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 24px; }
+    .section h2 { margin-top: 0; font-size: 1.4rem; }
+    ul { padding-left: 20px; }
+    .contact-box { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 768px) { .contact-box { grid-template-columns: 1.1fr 1fr; } }
+    label { display: block; margin-bottom: 4px; font-size: 0.9rem; }
+    input, textarea { width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc; font-size: 0.95rem; box-sizing: border-box; }
+    textarea { min-height: 120px; resize: vertical; }
+    .small-text { font-size: 0.8rem; color: #555; }
+    .btn { display: inline-block; margin-top: 8px; padding: 10px 20px; background-color: #111; color: #fff; border-radius: 4px; text-decoration: none; font-size: 0.95rem; cursor: pointer; border: none; }
+    .btn:hover { background-color: #333; }
+    footer { background-color: #111; color: #fff; padding: 16px 24px; font-size: 0.8rem; }
+    footer a { color: #fff; text-decoration: underline; }
+    footer a:hover { text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">Graceful Concierge</div>
+  <div class="tagline">powered by Murray Company Limited</div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <h1>Graceful Concierge</h1>
+    <p class="lead">
+      One trusted point of contact for your life, work, and partners.
+      Appointments, updates, and support — handled with care.
+    </p>
+    <p>
+      Tell Graceful what you need. We coordinate the details, keep you updated by text,
+      and close the loop with clear communication.
+    </p>
+    <p>
+      <span class="highlight">Service areas include:</span><br>
+      Personal and business logistics, reservations, reminders, and coordination with partner businesses.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>How Graceful Works</h2>
+    <ol>
+      <li><strong>You reach out</strong> — by text or via the contact form with what you need.</li>
+      <li><strong>We confirm by SMS</strong> — Graceful sends a confirmation so you know we received your request.</li>
+      <li><strong>We coordinate</strong> — with you and with any involved partners (restaurants, venues, service teams, etc.).</li>
+      <li><strong>You stay updated</strong> — appointment times, status updates, and changes by SMS.</li>
+      <li><strong>You close the loop</strong> — reply to adjust, cancel, or ask for more.</li>
+    </ol>
+  </section>
+
+  <section class="section">
+    <h2>Contact Graceful</h2>
+    <div class="contact-box">
+      <div>
+        <p><strong>SMS (text only):</strong><br>
+        <span class="highlight">+1 (888) 314-7789</span></p>
+
+        <p><strong>Email:</strong><br>
+        <a href="mailto:graceful@murraycompanylimited.com">graceful@murraycompanylimited.com</a></p>
+
+        <p><strong>Service hours:</strong><br>
+        Mon–Sat, 9:00 AM – 8:00 PM Eastern</p>
+
+        <p class="small-text">
+          When you contact us, Graceful Concierge may send you SMS messages to confirm details,
+          share updates, and respond to your requests.
+        </p>
+      </div>
+
+      <div>
+        <form>
+          <label>Name</label>
+          <input type="text" placeholder="Your name">
+
+          <label>Mobile Number</label>
+          <input type="tel" placeholder="Your mobile number">
+
+          <label>Email</label>
+          <input type="email" placeholder="Your email">
+
+          <label>What do you need help with?</label>
+          <textarea placeholder="Tell Graceful what you need..."></textarea>
+
+          <p class="small-text">
+            By providing your mobile number and submitting this form, you agree to receive SMS messages from Graceful Concierge
+            related to your requests, appointments, and service updates. Message frequency varies. Message & data rates may apply.
+            Reply STOP to cancel, HELP for assistance. Your number is not shared for third-party marketing.
+          </p>
+
+          <button type="button" class="btn">Submit request (coming soon)</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Partners and Service Areas</h2>
+    <p>
+      Graceful Concierge coordinates with select partner businesses. Communications, confirmations,
+      and updates always come from <strong>Graceful Concierge</strong>, even when we work behind the scenes.
+    </p>
+    <p class="small-text">
+      Example: “Graceful Concierge for House of Wines: your reservation is confirmed for [date/time].”
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <div>&copy; <span id="year"></span> Graceful Concierge, powered by Murray Company Limited.</div>
+  <div>
+    <a href="/sms-consent">SMS Consent & Messaging Policy</a> |
+    <a href="/privacy">Privacy Policy</a> |
+    <a href="/terms">Terms & Conditions</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
