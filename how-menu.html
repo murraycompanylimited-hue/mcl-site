@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>House of Wines · Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="House of Wines – wines by the glass and bottle, small plates, and desserts in Marietta, Ohio."
+  />
+
+  <style>
+    :root {
+      --bg: #faf6f2;
+      --card: #ffffff;
+      --accent: #7b2334;        /* deep wine */
+      --accent-soft: #f5e3e6;
+      --text: #2c2a2a;
+      --muted: #726f6c;
+      --border: #e7ddd5;
+      --shadow-soft: 0 14px 30px rgba(0, 0, 0, 0.06);
+      --radius-lg: 18px;
+      --font-main: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                   "Segoe UI", system-ui, sans-serif;
+      --font-display: "Georgia", "Times New Roman", serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background: radial-gradient(circle at top, #fdf8f2 0, #faf6f2 55%, #f5eee6 100%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    main {
+      max-width: 960px;
+      width: 100%;
+      margin: auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .tagline {
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .location {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .subline {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+      gap: 18px;
+    }
+
+    @media (max-width: 840px) {
+      body {
+        padding: 16px;
+      }
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border);
+      padding: 18px 18px 20px;
+    }
+
+    .card-title {
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      margin-bottom: 6px;
+      color: var(--accent);
+    }
+
+    .section-note {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .item-group {
+      margin-bottom: 12px;
+    }
+
+    .item-group-title {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .menu-item-name {
+      font-weight: 500;
+    }
+
+    .menu-item-note {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .price {
+      font-size: 13px;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .stack {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .hours-row {
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 4px;
+    }
+
+    .hours-day {
+      color: var(--muted);
+    }
+
+    .hours-time {
+      font-weight: 500;
+    }
+
+    .contact-block {
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .pill {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--accent-soft);
+      background: #fdf7f9;
+      font-size: 11px;
+      color: var(--accent);
+    }
+
+    footer {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 11px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="tagline">Wine · Kitchen · Marietta, Ohio</div>
+      <h1>House of Wines</h1>
+      <div class="location">Marietta, Ohio</div>
+      <p class="subline">
+        Wines by the glass and bottle, small plates, and desserts in a relaxed, welcoming room.
+      </p>
+    </header>
+
+    <section class="grid">
+      <!-- LEFT: WINES & FLIGHTS -->
+      <article class="card">
+        <div class="card-title">Wines &amp; Flights</div>
+
+        <div class="section-title">By the Glass</div>
+        <p class="section-note">
+          A rotating selection. Availability may change with vintage and season.
+        </p>
+
+        <div class="item-group">
+          <div class="item-group-title">Whites</div>
+
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Crisp Pinot Grigio</div>
+              <div class="menu-item-note">light, citrus, clean finish</div>
+            </div>
+            <div class="price">$9</div>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Bright Sauvignon Blanc</div>
+              <div class="menu-item-note">grapefruit, herbs, dry</div>
+            </div>
+            <div class="price">$10</div>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Chardonnay</div>
+              <div class="menu-item-note">subtle oak, stone fruit, rounded</div>
+            </div>
+            <div class="price">$11</div>
+          </div>
+        </div>
+
+        <div class="item-group">
+          <div class="item-group-title">Reds</div>
+
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Pinot Noir</div>
+              <div class="menu-item-note">soft tannins, red berry, elegant</div>
+            </div>
+            <div class="price">$11</div>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Cabernet Sauvignon</div>
+              <div class="menu-item-note">dark fruit, structure, classic</div>
+            </div>
+            <div class="price">$12</div>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Red Blend</div>
+              <div class="menu-item-note">smooth, approachable, guest favorite</div>
+            </div>
+            <div class="price">$10</div>
+          </div>
+        </div>
+
+        <div class="item-group">
+          <div class="item-group-title">Rosé &amp; Sparkling</div>
+
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Dry Rosé</div>
+              <div class="menu-item-note">strawberry, mineral, refreshing</div>
+            </div>
+            <div class="price">$10</div>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Sparkling Brut</div>
+              <div class="menu-item-note">celebration in a glass</div>
+            </div>
+            <div class="price">$11</div>
+          </div>
+        </div>
+
+        <div class="section-title" style="margin-top: 14px;">Wine Flights</div>
+        <p class="section-note">
+          Three-pour tasting flights built around a theme. Perfect for exploring.
+        </p>
+
+        <div class="item-group">
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Discover Reds Flight</div>
+              <div class="menu-item-note">a mix of light, medium, and bold reds</div>
+            </div>
+            <div class="price">$18</div>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Whites &amp; Rosé Flight</div>
+              <div class="menu-item-note">crisp, aromatic, and refreshing picks</div>
+            </div>
+            <div class="price">$17</div>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Sparkling Flight</div>
+              <div class="menu-item-note">three different bubbles to celebrate with</div>
+            </div>
+            <div class="price">$20</div>
+          </div>
+        </div>
+
+        <p class="section-note">
+          Ask your server or concierge for the current list of bottles and additional
+          by-the-glass options.
+        </p>
+      </article>
+
+      <!-- RIGHT: FOOD, DESSERTS, HOURS, CONTACT -->
+      <aside class="stack">
+        <section class="card">
+          <div class="card-title">Kitchen</div>
+          <div class="section-title">Small Plates &amp; Bites</div>
+          <p class="section-note">
+            Designed to share, pair with wine, and linger over.
+          </p>
+
+          <div class="item-group">
+            <div class="menu-item">
+              <div>
+                <div class="menu-item-name">Charcuterie Board</div>
+                <div class="menu-item-note">artisan meats, cheeses, accompaniments</div>
+              </div>
+              <div class="price">$22</div>
+            </div>
+
+            <div class="menu-item">
+              <div>
+                <div class="menu-item-name">Cheese Board</div>
+                <div class="menu-item-note">rotating selection of cheeses &amp; house touches</div>
+              </div>
+              <div class="price">$19</div>
+            </div>
+
+            <div class="menu-item">
+              <div>
+                <div class="menu-item-name">Flatbread of the Day</div>
+                <div class="menu-item-note">ask about today’s combination</div>
+              </div>
+              <div class="price">$14</div>
+            </div>
+
+            <div class="menu-item">
+              <div>
+                <div class="menu-item-name">Warm Olives &amp; Nuts</div>
+                <div class="menu-item-note">simple, savory, and wine-friendly</div>
+              </div>
+              <div class="price">$9</div>
+            </div>
+          </div>
+
+          <div class="section-title" style="margin-top: 12px;">Desserts</div>
+
+          <div class="item-group">
+            <div class="menu-item">
+              <div>
+                <div class="menu-item-name">Chocolate Torte</div>
+                <div class="menu-item-note">rich, dense, excellent with red wine</div>
+              </div>
+              <div class="price">$9</div>
+            </div>
+
+            <div class="menu-item">
+              <div>
+                <div class="menu-item-name">Seasonal Cheesecake</div>
+                <div class="menu-item-note">rotating flavors, ask for today’s slice</div>
+              </div>
+              <div class="price">$8</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-title">Hours &amp; Contact</div>
+
+          <div class="section-title">Hours</div>
+          <div class="section-note">Subject to change for holidays and special events.</div>
+
+          <div class="hours-row">
+            <div class="hours-day">Mon–Thu</div>
+            <div class="hours-time">11:00 am – 9:00 pm</div>
+          </div>
+          <div class="hours-row">
+            <div class="hours-day">Fri–Sat</div>
+            <div class="hours-time">11:00 am – 10:00 pm</div>
+          </div>
+          <div class="hours-row">
+            <div class="hours-day">Sun</div>
+            <div class="hours-time">12:00 pm – 6:00 pm</div>
+          </div>
+
+          <div class="contact-block">
+             )
+            <br />
+            Call: <a href="tel:+1-740-000-0000">+1 (740) 000-0000</a>
+            <br />
+            For concierge assistance or reservations by text, message:
+            <a href="sms:+1-888-314-7789">+1 (888) 314-7789</a>
+            <div class="pill">
+              For reservations, text RESERVE with date, time, and party size.
+            </div>
+          </div>
+        </section>
+      </aside>
+    </section>
+
+    <footer>
+      Menu content may vary. Please ask your server for current offerings.
+      <!-- Optional tiny credit: Site hosting by Murray Company Limited -->
+    </footer>
+  </main>
+</body>
+</html>
