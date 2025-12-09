@@ -75,10 +75,10 @@
     }
 
     .brand-mark {
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
-      border: 1px solid rgba(245, 193, 91, 0.5);
+      border: 1px solid rgba(245, 193, 91, 0.65);
       background:
         radial-gradient(circle at 30% 20%, rgba(245, 193, 91, 0.9), transparent 52%),
         radial-gradient(circle at 70% 80%, rgba(109, 196, 255, 0.9), transparent 55%),
@@ -87,10 +87,11 @@
       align-items: center;
       justify-content: center;
       font-weight: 700;
-      letter-spacing: 0.07em;
-      font-size: 11px;
+      letter-spacing: 0.12em;
+      font-size: 10px;
       text-transform: uppercase;
       color: #050608;
+      box-shadow: 0 0 0 2px rgba(5, 6, 8, 0.9);
     }
 
     .brand-text h1 {
@@ -530,6 +531,16 @@
       text-decoration: underline;
     }
 
+    .contact-qr {
+      margin-top: 4px;
+      width: 120px;
+      height: 120px;
+      border-radius: 14px;
+      border: 1px solid rgba(245, 193, 91, 0.55);
+      background: #050608;
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.6);
+    }
+
     footer {
       margin-top: 18px;
       font-size: 11px;
@@ -549,330 +560,3 @@
   <main>
     <div class="shell">
       <header>
-        <div class="brand-block">
-          <div class="brand-mark">MCL</div>
-          <div class="brand-text">
-            <h1>Murray Company Limited</h1>
-            <p>Connectivity • Structure • Private Enterprise</p>
-          </div>
-        </div>
-        <nav>
-          <a href="#projects" class="nav-pill">Projects</a>
-          <a href="#contact" class="nav-pill">Contact</a>
-          <a href="#projects" class="nav-pill">Bank · PMA · Nonprofit</a>
-        </nav>
-      </header>
-
-      <section class="hero">
-        <div>
-          <h2 class="hero-title">A Private Operating System for Real-World Value</h2>
-          <p class="hero-sub">
-            Murray Company Limited is the connective tissue behind a tight set of private brands:
-            banking, AI concierge, nonprofit impact, media, hydrogen food systems, and more.
-            This page is the master panel – every project below is live on the board.
-          </p>
-          <div class="hero-tags">
-            <div class="hero-tag">Private · Directed · Intentional</div>
-            <div class="hero-tag">Built by Murray</div>
-          </div>
-          <div class="hero-actions">
-            <a href="#projects" class="btn-primary">
-              View Active Projects
-              <span>↗</span>
-            </a>
-            <a href="#contact" class="btn-ghost">
-              Talk with Murray Company Limited
-            </a>
-          </div>
-        </div>
-
-        <aside class="hero-right" aria-label="Signal panel">
-          <div class="hero-right-label">Signal · Internal Use</div>
-          <div class="hero-right-title">Current live channels</div>
-          <ul class="hero-right-list">
-            <li>
-              <span class="hero-right-bullet">•</span>
-              <span>Domain: <strong>murraycompanylimited.com</strong> verified and routing through GitHub Pages.</span>
-            </li>
-            <li>
-              <span class="hero-right-bullet">•</span>
-              <span>Toll-free and direct lines designated for concierge &amp; intake.</span>
-            </li>
-            <li>
-              <span class="hero-right-bullet">•</span>
-              <span>Projects below are wired for click-to-contact right from this page.</span>
-            </li>
-          </ul>
-          <div class="hero-right-foot">
-            <span>Mode:</span> Demonstration · Family Weekend Deck
-          </div>
-        </aside>
-      </section>
-
-      <!-- Projects -->
-      <section id="projects" aria-label="Murray Company Limited projects">
-        <div class="section-title-row">
-          <h3 class="section-title">MCL Project Board</h3>
-          <p class="section-sub">Each card is clickable – overview + direct contact from this page.</p>
-        </div>
-
-        <div class="projects-grid">
-          <!-- White Market Unlimited PMA -->
-          <a class="project-card" href="#contact">
-            <div class="project-tag-row">
-              <div class="project-tag">PMA</div>
-              <div class="project-status">Foundational Entity</div>
-            </div>
-            <div class="project-title">White Market Unlimited PMA</div>
-            <div class="project-desc">
-              Private membership association focused on clean, lawful value flow and aligned commerce outside the noise.
-            </div>
-            <div class="project-meta">
-              <span class="chip">Membership</span>
-              <span class="chip">Policy-clean</span>
-              <span class="chip">Stewardship</span>
-            </div>
-            <div class="project-actions">
-              <div class="project-link">
-                <span>⟶</span>
-                Overview via MCL
-              </div>
-              <div class="project-contact">
-                <a href="mailto:graceful@murraycompanylimited.com?subject=White%20Market%20Unlimited%20PMA%20Inquiry">Email</a>
-                <span>·</span>
-                <a href="tel:+18883147789">Call</a>
-              </div>
-            </div>
-          </a>
-
-          <!-- DMJR Bank & Trust -->
-          <a class="project-card" href="#contact">
-            <div class="project-tag-row">
-              <div class="project-tag">Private Bank</div>
-              <div class="project-status">Architecture</div>
-            </div>
-            <div class="project-title">DMJR Bank &amp; Trust</div>
-            <div class="project-desc">
-              Quiet, trust-anchored banking concept designed for capital stewardship, not spectacle. Structure before noise.
-            </div>
-            <div class="project-meta">
-              <span class="chip">Trust-based</span>
-              <span class="chip">Private office</span>
-            </div>
-            <div class="project-actions">
-              <div class="project-link">
-                <span>⟶</span>
-                Discuss structure
-              </div>
-              <div class="project-contact">
-                <a href="mailto:graceful@murraycompanylimited.com?subject=DMJR%20Bank%20%26%20Trust%20Inquiry">Email</a>
-                <span>·</span>
-                <a href="tel:+18437902922">Direct</a>
-              </div>
-            </div>
-          </a>
-
-          <!-- Graceful Concierge -->
-          <a class="project-card" href="#contact">
-            <div class="project-tag-row">
-              <div class="project-tag">AI Concierge</div>
-              <div class="project-status">Operational</div>
-            </div>
-            <div class="project-title">Graceful Concierge</div>
-            <div class="project-desc">
-              Human-level concierge, powered by AI, wired for SMS and email intake to handle planning, copy, and execution.
-            </div>
-            <div class="project-meta">
-              <span class="chip">Concierge</span>
-              <span class="chip">AI-assisted</span>
-              <span class="chip">SMS / Email</span>
-            </div>
-            <div class="project-actions">
-              <div class="project-link">
-                <span>⟶</span>
-                Route through Graceful
-              </div>
-              <div class="project-contact">
-                <a href="mailto:graceful@murraycompanylimited.com?subject=Graceful%20Concierge%20Request">Email</a>
-                <span>·</span>
-                <a href="tel:+18883147789">Toll-free</a>
-              </div>
-            </div>
-          </a>
-
-          <!-- Clan of Murray Human Alliance -->
-          <a class="project-card" href="#contact">
-            <div class="project-tag-row">
-              <div class="project-tag">Nonprofit</div>
-              <div class="project-status">Mission-Defined</div>
-            </div>
-            <div class="project-title">Clan of Murray Human Alliance</div>
-            <div class="project-desc">
-              Feed the hungry, shelter the homeless, support the work against cancer – operating under the Golden Rule.
-            </div>
-            <div class="project-meta">
-              <span class="chip">Outreach</span>
-              <span class="chip">Human-first</span>
-            </div>
-            <div class="project-actions">
-              <div class="project-link">
-                <span>⟶</span>
-                Explore alliance
-              </div>
-              <div class="project-contact">
-                <a href="mailto:graceful@murraycompanylimited.com?subject=Clan%20of%20Murray%20Human%20Alliance">Email</a>
-                <span>·</span>
-                <a href="tel:+18437902922">Direct</a>
-              </div>
-            </div>
-          </a>
-
-          <!-- Donnie Dictionary (tightened) -->
-          <a class="project-card" href="#contact">
-            <div class="project-tag-row">
-              <div class="project-tag">Media Lab</div>
-              <div class="project-status">In Studio</div>
-            </div>
-            <div class="project-title">Donnie Dictionary</div>
-            <div class="project-desc">
-              Precision decoding of language, law, and commerce. One word at a time, without the usual filters.
-            </div>
-            <div class="project-meta">
-              <span class="chip">Daily word</span>
-              <span class="chip">Signal, not noise</span>
-            </div>
-            <div class="project-actions">
-              <div class="project-link">
-                <span>⟶</span>
-                Request a word
-              </div>
-              <div class="project-contact">
-                <a href="mailto:graceful@murraycompanylimited.com?subject=Donnie%20Dictionary%20Request">Email</a>
-              </div>
-            </div>
-          </a>
-
-          <!-- Phresh Global / Hydrogen Food Network -->
-          <a class="project-card" href="#contact">
-            <div class="project-tag-row">
-              <div class="project-tag">Food Network</div>
-              <div class="project-status">Concept · Active</div>
-            </div>
-            <div class="project-title">Phresh Global · Hydrogen Food Network</div>
-            <div class="project-desc">
-              A network vision: hydrogen-powered food trucks feeding communities, backed by real structure and planning.
-            </div>
-            <div class="project-meta">
-              <span class="chip">Hydrogen</span>
-              <span class="chip">Mobile food</span>
-            </div>
-            <div class="project-actions">
-              <div class="project-link">
-                <span>⟶</span>
-                Talk expansion
-              </div>
-              <div class="project-contact">
-                <a href="mailto:graceful@murraycompanylimited.com?subject=Phresh%20Global%20Hydrogen%20Network">Email</a>
-                <span>·</span>
-                <a href="tel:+18883147789">Call</a>
-              </div>
-            </div>
-          </a>
-
-          <!-- Donnie Discount -->
-          <a class="project-card" href="#contact">
-            <div class="project-tag-row">
-              <div class="project-tag">Ops</div>
-              <div class="project-status">Workhorse</div>
-            </div>
-            <div class="project-title">Donnie Discount</div>
-            <div class="project-desc">
-              Industrial-minded operator lane – sourcing, supply, and problem-solving where the margins actually live.
-            </div>
-            <div class="project-meta">
-              <span class="chip">Sourcing</span>
-              <span class="chip">Industrial</span>
-            </div>
-            <div class="project-actions">
-              <div class="project-link">
-                <span>⟶</span>
-                Discuss a job
-              </div>
-              <div class="project-contact">
-                <a href="mailto:graceful@murraycompanylimited.com?subject=Donnie%20Discount%20Work%20Request">Email</a>
-              </div>
-            </div>
-          </a>
-
-          <!-- House of Wines Initiative (optional, but impressive) -->
-          <a class="project-card" href="#contact">
-            <div class="project-tag-row">
-              <div class="project-tag">Hospitality</div>
-              <div class="project-status">Live context</div>
-            </div>
-            <div class="project-title">House of Wines · Field Operations</div>
-            <div class="project-desc">
-              Real-time hospitality work used as a testing ground for systems, service flows, and revenue experiments.
-            </div>
-            <div class="project-meta">
-              <span class="chip">On-the-ground</span>
-              <span class="chip">Systems lab</span>
-            </div>
-            <div class="project-actions">
-              <div class="project-link">
-                <span>⟶</span>
-                Ask about ops
-              </div>
-              <div class="project-contact">
-                <a href="mailto:graceful@murraycompanylimited.com?subject=House%20of%20Wines%20Operations">Email</a>
-              </div>
-            </div>
-          </a>
-        </div>
-      </section>
-
-      <!-- Contact -->
-      <section id="contact" class="contact-shell">
-        <div class="contact-title">Contact · Murray Company Limited</div>
-        <div class="contact-main">
-          <div class="contact-left">
-            <p>
-              For any project on this page, reach out through the channels below.
-              This inbox and these lines are monitored for signal, not spam.
-              Be clear about which project you’re asking about, and it will be routed correctly.
-            </p>
-          </div>
-          <div class="contact-right">
-            <div class="contact-label">Email</div>
-            <div class="contact-item">
-              <a href="mailto:graceful@murraycompanylimited.com?subject=MCL%20Portfolio%20Inquiry">
-                graceful@murraycompanylimited.com
-              </a>
-            </div>
-
-            <div class="contact-label" style="margin-top: 8px;">Phone</div>
-            <div class="contact-item">
-              Toll-Free:
-              <a href="tel:+18883147789">+1 (888) 314-7789</a>
-            </div>
-            <div class="contact-item">
-              Direct:
-              <a href="tel:+18437902922">+1 (843) 790-2922</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <footer>
-        <span>© <span id="year"></span> Murray Company Limited · All rights reserved.</span>
-        <span>Quietly operated by Murray.</span>
-      </footer>
-    </div>
-  </main>
-
-  <script>
-    // Auto-update year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
