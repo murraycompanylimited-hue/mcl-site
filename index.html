@@ -1,30 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Murray Company Limited – Connectivity & Concierge Ops</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Murray Company Limited – front office for connectivity, concierge, and transmission projects including Donnie Dictionary, Graceful Concierge, and White Market Unlimited." />
-
-  <link
-    rel="icon"
-    type="image/svg+xml"
-    href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" ry="12" fill="%23050509"/><text x="50%" y="52%" text-anchor="middle" font-size="22" fill="%23f5c744" font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">MCL</text></svg>'
-  />
-
+  <title>Murray Company Limited | Projects Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Murray Company Limited – a connectivity-focused holding platform for private banking, AI concierge, nonprofit impact, media, and hydrogen food systems." />
   <style>
     :root {
-      --bg: #050509;
-      --card: #111119;
-      --accent: #f5c744;
-      --accent-soft: rgba(245, 199, 68, 0.1);
-      --text: #f5f5f5;
-      --muted: #a1a1b3;
-      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.6);
+      --bg: #050608;
+      --bg-soft: #0b0f16;
+      --card: #101722;
+      --accent: #f5c15b;
+      --accent-soft: rgba(245, 193, 91, 0.15);
+      --text: #f5f7fa;
+      --muted: #9ea8bb;
+      --border: #1e2633;
       --radius-lg: 18px;
-      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-                   "Segoe UI", sans-serif;
+      --radius-xl: 26px;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.55);
+      --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.45);
+      --speed-fast: 180ms;
+      --speed-med: 260ms;
     }
 
     * {
@@ -34,249 +30,849 @@
     }
 
     body {
-      font-family: var(--font-main);
-      background: radial-gradient(circle at top, #151521 0, #050509 55%, #000 100%);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      background: radial-gradient(circle at top, #1b293d 0, #050608 55%);
       color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: stretch;
-      padding: 24px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
 
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+
+    /* Header / Hero */
     .shell {
-      max-width: 1100px;
-      width: 100%;
-      margin: auto;
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      background:
+        radial-gradient(circle at top left, rgba(245, 193, 91, 0.12), transparent 55%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.02), transparent 60%),
+        rgba(4, 6, 10, 0.96);
+      box-shadow: var(--shadow-soft);
+      padding: 26px 26px 30px;
     }
 
     header {
-      margin-bottom: 26px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
     }
 
-    .brand-pill {
+    .brand-block {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(245, 193, 91, 0.5);
+      background:
+        radial-gradient(circle at 30% 20%, rgba(245, 193, 91, 0.9), transparent 52%),
+        radial-gradient(circle at 70% 80%, rgba(109, 196, 255, 0.9), transparent 55%),
+        #050608;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      font-size: 11px;
+      text-transform: uppercase;
+      color: #050608;
+    }
+
+    .brand-text h1 {
+      font-size: 18px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand-text p {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-pill {
+      font-size: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(158, 168, 187, 0.35);
+      color: var(--muted);
+      background: rgba(3, 6, 12, 0.8);
+      cursor: pointer;
+      transition:
+        background var(--speed-fast) ease,
+        color var(--speed-fast) ease,
+        border-color var(--speed-fast) ease,
+        transform var(--speed-fast) ease;
+    }
+
+    .nav-pill:hover {
+      background: rgba(245, 193, 91, 0.08);
+      color: var(--text);
+      border-color: rgba(245, 193, 91, 0.65);
+      transform: translateY(-1px);
+    }
+
+    /* Hero content */
+    .hero {
+      margin-top: 14px;
+      margin-bottom: 24px;
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.3fr);
+      gap: 24px;
+      align-items: center;
+    }
+
+    .hero-title {
+      font-size: 28px;
+      font-weight: 650;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .hero-sub {
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 34rem;
+      margin-bottom: 14px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .hero-tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(245, 193, 91, 0.4);
+      background: rgba(5, 6, 8, 0.7);
+      color: var(--accent);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn-primary, .btn-ghost {
+      font-size: 13px;
+      padding: 9px 15px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 4px 12px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 11px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
+      text-decoration: none;
+      transition:
+        background var(--speed-med) ease,
+        color var(--speed-med) ease,
+        border-color var(--speed-med) ease,
+        transform var(--speed-fast) ease,
+        box-shadow var(--speed-fast) ease;
     }
 
-    .brand-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--accent);
+    .btn-primary {
+      background: linear-gradient(135deg, #f5c15b, #ffdf9a);
+      color: #1a1303;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
     }
 
-    h1 {
-      margin-top: 14px;
-      font-size: 32px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
     }
 
-    .subtitle {
-      margin-top: 8px;
+    .btn-ghost {
+      background: rgba(2, 6, 14, 0.85);
       color: var(--muted);
-      font-size: 13px;
-      max-width: 640px;
+      border-color: rgba(158, 168, 187, 0.4);
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.2fr);
-      gap: 18px;
+    .btn-ghost:hover {
+      background: rgba(245, 193, 91, 0.06);
+      color: var(--text);
+      border-color: rgba(245, 193, 91, 0.7);
+      transform: translateY(-1px);
     }
 
-    @media (max-width: 840px) {
-      body {
-        padding: 16px;
-      }
-      .grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
+    .hero-right {
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(245, 193, 91, 0.35);
+      background:
+        radial-gradient(circle at 10% 0, rgba(245, 193, 91, 0.4), transparent 55%),
+        radial-gradient(circle at 110% 60%, rgba(82, 172, 255, 0.5), transparent 55%),
+        #06070b;
+      padding: 16px 18px 18px;
+      box-shadow: var(--shadow-card);
     }
 
-    .card {
-      background: linear-gradient(145deg, #101018, #070710);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(245, 199, 68, 0.16);
-      padding: 18px 18px 20px;
+    .hero-right-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: rgba(18, 23, 33, 0.9);
+      background: rgba(245, 193, 91, 0.92);
+      padding: 3px 10px;
+      border-radius: 999px;
+      display: inline-flex;
+      margin-bottom: 10px;
     }
 
-    .card-title {
+    .hero-right-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .hero-right-list {
+      list-style: none;
+      font-size: 12px;
+      color: #f5f7fa;
+    }
+
+    .hero-right-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .hero-right-bullet {
+      margin-top: 3px;
+      font-size: 16px;
+    }
+
+    .hero-right-foot {
+      margin-top: 10px;
+      font-size: 11px;
+      color: rgba(10, 16, 28, 0.9);
+      background: rgba(255, 255, 255, 0.78);
+      border-radius: 999px;
+      padding: 5px 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-right-foot span {
+      font-weight: 600;
+      color: #151823;
+    }
+
+    /* Projects */
+    .section-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      margin: 4px 0 12px;
+    }
+
+    .section-title {
       font-size: 14px;
       text-transform: uppercase;
       letter-spacing: 0.18em;
       color: var(--muted);
-      margin-bottom: 10px;
     }
 
-    .hero-main {
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-
-    .hero-body {
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.6;
-      margin-bottom: 14px;
-    }
-
-    .list {
-      list-style: none;
-      font-size: 12px;
-      color: var(--muted);
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .list span {
-      color: var(--accent);
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      margin-right: 8px;
-    }
-
-    .link-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 10px;
-      margin-top: 8px;
-    }
-
-    .link-card {
-      border-radius: 12px;
-      border: 1px solid rgba(245, 199, 68, 0.24);
-      padding: 10px 12px;
-      font-size: 12px;
-      background: radial-gradient(circle at top, rgba(245,199,68,0.14), transparent 60%);
-    }
-
-    .link-label {
-      font-size: 10px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 4px;
-    }
-
-    .link-card a {
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    .link-card a:hover {
-      text-decoration: underline;
-    }
-
-    .contact-block {
-      margin-top: 10px;
-      padding-top: 8px;
-      border-top: 1px dashed rgba(245, 199, 68, 0.26);
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .footer {
-      margin-top: 18px;
-      text-align: center;
+    .section-sub {
       font-size: 11px;
       color: var(--muted);
     }
 
-    .footer strong {
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 6px;
+    }
+
+    @media (max-width: 960px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      main {
+        padding: 18px 16px 36px;
+      }
+      .shell {
+        padding: 20px 18px 22px;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .projects-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .project-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      background: linear-gradient(145deg, rgba(7, 10, 17, 0.97), rgba(7, 11, 21, 0.97));
+      padding: 12px 12px 11px;
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      cursor: pointer;
+      transition:
+        transform var(--speed-fast) ease,
+        box-shadow var(--speed-fast) ease,
+        border-color var(--speed-fast) ease,
+        background var(--speed-fast) ease;
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(245, 193, 91, 0.18), transparent 60%);
+      opacity: 0;
+      transition: opacity var(--speed-fast) ease;
+      pointer-events: none;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.75);
+      border-color: rgba(245, 193, 91, 0.6);
+      background: linear-gradient(145deg, #0c101c, #08101e);
+    }
+
+    .project-card:hover::before {
+      opacity: 1;
+    }
+
+    .project-tag-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .project-tag {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(245, 193, 91, 0.12);
+      border: 1px solid rgba(245, 193, 91, 0.5);
       color: var(--accent);
+    }
+
+    .project-status {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    .project-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .project-desc {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 7px;
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 7px;
+    }
+
+    .chip {
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(158, 168, 187, 0.4);
+      color: var(--muted);
+      background: rgba(4, 7, 14, 0.8);
+    }
+
+    .project-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(245, 193, 91, 0.12);
+      color: var(--accent);
+      border: 1px solid rgba(245, 193, 91, 0.5);
+      white-space: nowrap;
+    }
+
+    .project-link span {
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    .project-contact {
+      display: inline-flex;
+      gap: 10px;
+      color: var(--muted);
+    }
+
+    .project-contact a {
+      text-decoration: none;
+    }
+
+    .project-contact a:hover {
+      color: var(--accent);
+    }
+
+    /* Contact / Footer */
+    .contact-shell {
+      margin-top: 26px;
+      border-radius: var(--radius-xl);
+      padding: 16px 18px 14px;
+      border: 1px solid rgba(245, 193, 91, 0.4);
+      background:
+        radial-gradient(circle at top right, rgba(245, 193, 91, 0.22), transparent 60%),
+        rgba(5, 7, 12, 0.96);
+      box-shadow: var(--shadow-card);
+    }
+
+    .contact-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .contact-main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: space-between;
+      align-items: flex-start;
+      font-size: 13px;
+    }
+
+    .contact-left p {
+      max-width: 28rem;
+      color: var(--text);
+    }
+
+    .contact-right {
+      min-width: 210px;
+    }
+
+    .contact-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .contact-item {
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .contact-item a {
+      color: var(--accent);
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 18px;
+      font-size: 11px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    footer span {
+      opacity: 0.8;
     }
   </style>
 </head>
 <body>
-  <main class="shell">
-    <header>
-      <div class="brand-pill">
-        <div class="brand-dot"></div>
-        MURRAY COMPANY LIMITED · FRONT OFFICE
-      </div>
-      <h1>Murray Company Limited</h1>
-      <p class="subtitle">
-        Connectivity, concierge, and transmission. This is the public-facing shell
-        for the work that runs underneath: Donnie Dictionary, Graceful Concierge,
-        and the White Market Unlimited ecosystem.
-      </p>
-    </header>
-
-    <section class="grid">
-      <article class="card">
-        <div class="card-title">Operating Position</div>
-        <div class="hero-main">Signals from one desk, not ten apps.</div>
-        <p class="hero-body">
-          MCL sits at the front door: one place where people can see what is active,
-          where to go next, and how to get in touch. No corporate wallpaper, no noise –
-          just clean links into the live projects.
-        </p>
-
-        <ul class="list">
-          <li><span>CONNECT</span>Route people to the right channel without exposing the entire back-end structure.</li>
-          <li><span>CONCIERGE</span>Offer select services and projects on a “by-invite” or “by-introduction” basis.</li>
-          <li><span>SIGNAL</span>Keep the story consistent: same colors, same tone, same Golden Rule backbone.</li>
-        </ul>
-
-        <div class="contact-block">
-          For direct intake:
-          <br />
-          <a href="mailto:graceful@murraycompanylimited.com">graceful@murraycompanylimited.com</a>
-          <br />
-          (Include a clear subject line so it doesn’t get ignored.)
-        </div>
-      </article>
-
-      <aside class="card">
-        <div class="card-title">Active Channels</div>
-        <div class="link-grid">
-          <div class="link-card">
-            <div class="link-label">Donnie Dictionary</div>
-            <a href="https://murraycompanylimited-hue.github.io/donniedictionary/" target="_blank" rel="noopener">
-              Daily word ops · law & language decoded
-            </a>
-          </div>
-          <div class="link-card">
-            <div class="link-label">Graceful Concierge</div>
-            <a href="#" title="Graceful site link placeholder">
-              High-touch concierge, hospitality & revenue experiments (coming online)
-            </a>
-          </div>
-          <div class="link-card">
-            <div class="link-label">White Market Unlimited PMA</div>
-            <a href="#" title="White Market Unlimited placeholder">
-              Private membership backbone for long-horizon projects
-            </a>
-          </div>
-          <div class="link-card">
-            <div class="link-label">House of Wines / Field Work</div>
-            <span>
-              Live-world testing ground for service, systems, and revenue flows.
-            </span>
+  <main>
+    <div class="shell">
+      <header>
+        <div class="brand-block">
+          <div class="brand-mark">MCL</div>
+          <div class="brand-text">
+            <h1>Murray Company Limited</h1>
+            <p>Connectivity • Structure • Private Enterprise</p>
           </div>
         </div>
-      </aside>
-    </section>
+        <nav>
+          <a href="#projects" class="nav-pill">Projects</a>
+          <a href="#contact" class="nav-pill">Contact</a>
+          <a href="#projects" class="nav-pill">Bank · PMA · Nonprofit</a>
+        </nav>
+      </header>
 
-    <footer class="footer">
-      <div>
-        <strong>Murray Company Limited</strong> · Operating on the Golden Rule ·
-        Public shell, private structure.
-      </div>
-    </footer>
+      <section class="hero">
+        <div>
+          <h2 class="hero-title">A Private Operating System for Real-World Value</h2>
+          <p class="hero-sub">
+            Murray Company Limited is the connective tissue behind a tight set of private brands:
+            banking, AI concierge, nonprofit impact, media, hydrogen food systems, and more.
+            This page is the master panel – every project below is live on the board.
+          </p>
+          <div class="hero-tags">
+            <div class="hero-tag">Private · Directed · Intentional</div>
+            <div class="hero-tag">Built by Murray</div>
+          </div>
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary">
+              View Active Projects
+              <span>↗</span>
+            </a>
+            <a href="#contact" class="btn-ghost">
+              Talk with Murray Company Limited
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-right" aria-label="Signal panel">
+          <div class="hero-right-label">Signal · Internal Use</div>
+          <div class="hero-right-title">Current live channels</div>
+          <ul class="hero-right-list">
+            <li>
+              <span class="hero-right-bullet">•</span>
+              <span>Domain: <strong>murraycompanylimited.com</strong> verified and routing through GitHub Pages.</span>
+            </li>
+            <li>
+              <span class="hero-right-bullet">•</span>
+              <span>Toll-free and direct lines designated for concierge &amp; intake.</span>
+            </li>
+            <li>
+              <span class="hero-right-bullet">•</span>
+              <span>Projects below are wired for click-to-contact right from this page.</span>
+            </li>
+          </ul>
+          <div class="hero-right-foot">
+            <span>Mode:</span> Demonstration · Family Weekend Deck
+          </div>
+        </aside>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" aria-label="Murray Company Limited projects">
+        <div class="section-title-row">
+          <h3 class="section-title">MCL Project Board</h3>
+          <p class="section-sub">Each card is clickable – overview + direct contact from this page.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- White Market Unlimited PMA -->
+          <a class="project-card" href="#contact">
+            <div class="project-tag-row">
+              <div class="project-tag">PMA</div>
+              <div class="project-status">Foundational Entity</div>
+            </div>
+            <div class="project-title">White Market Unlimited PMA</div>
+            <div class="project-desc">
+              Private membership association focused on clean, lawful value flow and aligned commerce outside the noise.
+            </div>
+            <div class="project-meta">
+              <span class="chip">Membership</span>
+              <span class="chip">Policy-clean</span>
+              <span class="chip">Stewardship</span>
+            </div>
+            <div class="project-actions">
+              <div class="project-link">
+                <span>⟶</span>
+                Overview via MCL
+              </div>
+              <div class="project-contact">
+                <a href="mailto:graceful@murraycompanylimited.com?subject=White%20Market%20Unlimited%20PMA%20Inquiry">Email</a>
+                <span>·</span>
+                <a href="tel:+18883147789">Call</a>
+              </div>
+            </div>
+          </a>
+
+          <!-- DMJR Bank & Trust -->
+          <a class="project-card" href="#contact">
+            <div class="project-tag-row">
+              <div class="project-tag">Private Bank</div>
+              <div class="project-status">Architecture</div>
+            </div>
+            <div class="project-title">DMJR Bank &amp; Trust</div>
+            <div class="project-desc">
+              Quiet, trust-anchored banking concept designed for capital stewardship, not spectacle. Structure before noise.
+            </div>
+            <div class="project-meta">
+              <span class="chip">Trust-based</span>
+              <span class="chip">Private office</span>
+            </div>
+            <div class="project-actions">
+              <div class="project-link">
+                <span>⟶</span>
+                Discuss structure
+              </div>
+              <div class="project-contact">
+                <a href="mailto:graceful@murraycompanylimited.com?subject=DMJR%20Bank%20%26%20Trust%20Inquiry">Email</a>
+                <span>·</span>
+                <a href="tel:+18437902922">Direct</a>
+              </div>
+            </div>
+          </a>
+
+          <!-- Graceful Concierge -->
+          <a class="project-card" href="#contact">
+            <div class="project-tag-row">
+              <div class="project-tag">AI Concierge</div>
+              <div class="project-status">Operational</div>
+            </div>
+            <div class="project-title">Graceful Concierge</div>
+            <div class="project-desc">
+              Human-level concierge, powered by AI, wired for SMS and email intake to handle planning, copy, and execution.
+            </div>
+            <div class="project-meta">
+              <span class="chip">Concierge</span>
+              <span class="chip">AI-assisted</span>
+              <span class="chip">SMS / Email</span>
+            </div>
+            <div class="project-actions">
+              <div class="project-link">
+                <span>⟶</span>
+                Route through Graceful
+              </div>
+              <div class="project-contact">
+                <a href="mailto:graceful@murraycompanylimited.com?subject=Graceful%20Concierge%20Request">Email</a>
+                <span>·</span>
+                <a href="tel:+18883147789">Toll-free</a>
+              </div>
+            </div>
+          </a>
+
+          <!-- Clan of Murray Human Alliance -->
+          <a class="project-card" href="#contact">
+            <div class="project-tag-row">
+              <div class="project-tag">Nonprofit</div>
+              <div class="project-status">Mission-Defined</div>
+            </div>
+            <div class="project-title">Clan of Murray Human Alliance</div>
+            <div class="project-desc">
+              Feed the hungry, shelter the homeless, support the work against cancer – operating under the Golden Rule.
+            </div>
+            <div class="project-meta">
+              <span class="chip">Outreach</span>
+              <span class="chip">Human-first</span>
+            </div>
+            <div class="project-actions">
+              <div class="project-link">
+                <span>⟶</span>
+                Explore alliance
+              </div>
+              <div class="project-contact">
+                <a href="mailto:graceful@murraycompanylimited.com?subject=Clan%20of%20Murray%20Human%20Alliance">Email</a>
+                <span>·</span>
+                <a href="tel:+18437902922">Direct</a>
+              </div>
+            </div>
+          </a>
+
+          <!-- Donnie Dictionary (tightened) -->
+          <a class="project-card" href="#contact">
+            <div class="project-tag-row">
+              <div class="project-tag">Media Lab</div>
+              <div class="project-status">In Studio</div>
+            </div>
+            <div class="project-title">Donnie Dictionary</div>
+            <div class="project-desc">
+              Precision decoding of language, law, and commerce. One word at a time, without the usual filters.
+            </div>
+            <div class="project-meta">
+              <span class="chip">Daily word</span>
+              <span class="chip">Signal, not noise</span>
+            </div>
+            <div class="project-actions">
+              <div class="project-link">
+                <span>⟶</span>
+                Request a word
+              </div>
+              <div class="project-contact">
+                <a href="mailto:graceful@murraycompanylimited.com?subject=Donnie%20Dictionary%20Request">Email</a>
+              </div>
+            </div>
+          </a>
+
+          <!-- Phresh Global / Hydrogen Food Network -->
+          <a class="project-card" href="#contact">
+            <div class="project-tag-row">
+              <div class="project-tag">Food Network</div>
+              <div class="project-status">Concept · Active</div>
+            </div>
+            <div class="project-title">Phresh Global · Hydrogen Food Network</div>
+            <div class="project-desc">
+              A network vision: hydrogen-powered food trucks feeding communities, backed by real structure and planning.
+            </div>
+            <div class="project-meta">
+              <span class="chip">Hydrogen</span>
+              <span class="chip">Mobile food</span>
+            </div>
+            <div class="project-actions">
+              <div class="project-link">
+                <span>⟶</span>
+                Talk expansion
+              </div>
+              <div class="project-contact">
+                <a href="mailto:graceful@murraycompanylimited.com?subject=Phresh%20Global%20Hydrogen%20Network">Email</a>
+                <span>·</span>
+                <a href="tel:+18883147789">Call</a>
+              </div>
+            </div>
+          </a>
+
+          <!-- Donnie Discount -->
+          <a class="project-card" href="#contact">
+            <div class="project-tag-row">
+              <div class="project-tag">Ops</div>
+              <div class="project-status">Workhorse</div>
+            </div>
+            <div class="project-title">Donnie Discount</div>
+            <div class="project-desc">
+              Industrial-minded operator lane – sourcing, supply, and problem-solving where the margins actually live.
+            </div>
+            <div class="project-meta">
+              <span class="chip">Sourcing</span>
+              <span class="chip">Industrial</span>
+            </div>
+            <div class="project-actions">
+              <div class="project-link">
+                <span>⟶</span>
+                Discuss a job
+              </div>
+              <div class="project-contact">
+                <a href="mailto:graceful@murraycompanylimited.com?subject=Donnie%20Discount%20Work%20Request">Email</a>
+              </div>
+            </div>
+          </a>
+
+          <!-- House of Wines Initiative (optional, but impressive) -->
+          <a class="project-card" href="#contact">
+            <div class="project-tag-row">
+              <div class="project-tag">Hospitality</div>
+              <div class="project-status">Live context</div>
+            </div>
+            <div class="project-title">House of Wines · Field Operations</div>
+            <div class="project-desc">
+              Real-time hospitality work used as a testing ground for systems, service flows, and revenue experiments.
+            </div>
+            <div class="project-meta">
+              <span class="chip">On-the-ground</span>
+              <span class="chip">Systems lab</span>
+            </div>
+            <div class="project-actions">
+              <div class="project-link">
+                <span>⟶</span>
+                Ask about ops
+              </div>
+              <div class="project-contact">
+                <a href="mailto:graceful@murraycompanylimited.com?subject=House%20of%20Wines%20Operations">Email</a>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="contact-shell">
+        <div class="contact-title">Contact · Murray Company Limited</div>
+        <div class="contact-main">
+          <div class="contact-left">
+            <p>
+              For any project on this page, reach out through the channels below.
+              This inbox and these lines are monitored for signal, not spam.
+              Be clear about which project you’re asking about, and it will be routed correctly.
+            </p>
+          </div>
+          <div class="contact-right">
+            <div class="contact-label">Email</div>
+            <div class="contact-item">
+              <a href="mailto:graceful@murraycompanylimited.com?subject=MCL%20Portfolio%20Inquiry">
+                graceful@murraycompanylimited.com
+              </a>
+            </div>
+
+            <div class="contact-label" style="margin-top: 8px;">Phone</div>
+            <div class="contact-item">
+              Toll-Free:
+              <a href="tel:+18883147789">+1 (888) 314-7789</a>
+            </div>
+            <div class="contact-item">
+              Direct:
+              <a href="tel:+18437902922">+1 (843) 790-2922</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <span>© <span id="year"></span> Murray Company Limited · All rights reserved.</span>
+        <span>Quietly operated by Murray.</span>
+      </footer>
+    </div>
   </main>
+
+  <script>
+    // Auto-update year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
