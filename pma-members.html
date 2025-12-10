@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>White Market Unlimited PMA – Members</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Minimal extras for this page only – safe even if styles.css already exists */
+
+    .page-wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .pill-dot {
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 8px rgba(34, 197, 94, 0.7);
+    }
+
+    .hero-block {
+      margin-top: 2rem;
+      padding: 2rem 1.5rem;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: radial-gradient(circle at top left, rgba(255,255,255,0.08), transparent 55%),
+                  radial-gradient(circle at bottom right, rgba(0,0,0,0.8), #020617);
+      backdrop-filter: blur(16px);
+    }
+
+    .hero-title {
+      font-size: clamp(2.1rem, 3vw, 2.8rem);
+      line-height: 1.05;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-sub {
+      font-size: 0.98rem;
+      max-width: 36rem;
+      opacity: 0.9;
+    }
+
+    .cta-row {
+      margin-top: 1.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.7rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #facc15, #eab308);
+      color: #000;
+      text-decoration: none;
+      box-shadow: 0 16px 32px rgba(0,0,0,0.45);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 22px 40px rgba(0,0,0,0.55);
+      background: linear-gradient(135deg, #fde047, #facc15);
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.3rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: inherit;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(10px);
+      transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 0.95);
+      border-color: rgba(248, 250, 252, 0.8);
+      transform: translateY(-1px);
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
+      gap: 1.75rem;
+      margin-top: 2.5rem;
+    }
+
+    .card {
+      padding: 1.5rem 1.4rem;
+      border-radius: 18px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: radial-gradient(circle at top left, rgba(148,163,184,0.18), rgba(15,23,42,0.96));
+    }
+
+    .card h3 {
+      font-size: 1.02rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .card p {
+      font-size: 0.92rem;
+      line-height: 1.5;
+      opacity: 0.92;
+    }
+
+    .card ul {
+      margin-top: 0.75rem;
+      padding-left: 1.1rem;
+      font-size: 0.9rem;
+      line-height: 1.55;
+      opacity: 0.9;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 0.25rem;
+      font-size: 0.9rem;
+      margin-top: 0.75rem;
+    }
+
+    .meta-label {
+      opacity: 0.6;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .legal-footnote {
+      margin-top: 2.25rem;
+      font-size: 0.78rem;
+      line-height: 1.6;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 768px) {
+      .page-wrap {
+        padding: 1.5rem 1rem 3rem;
+      }
+
+      .hero-block {
+        padding: 1.6rem 1.25rem;
+      }
+
+      .grid-two {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body class="site-body">
+  <!-- If you already have a shared header/nav, keep using it.
+       Otherwise this is a safe minimal one. -->
+
+  <header class="site-header">
+    <div class="site-header-inner page-wrap">
+      <div class="site-logo">
+        <a href="index.html">White Market Unlimited</a>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="donnie-dictionary.html">Donnie Dictionary</a>
+        <a href="pma-members.html" class="active">PMA Members</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <section class="hero-block">
+      <div class="pill">
+        <span class="pill-dot"></span>
+        <span>Private Membership Association · Live</span>
+      </div>
+
+      <h1 class="hero-title">
+        Members-only access to the White Market.
+      </h1>
+      <p class="hero-sub">
+        The PMA is a private, contract-based association. No hype, no noise.
+        Just aligned people operating in honor under agreed-upon rules,
+        off the public circus and on a private track.
+      </p>
+
+      <div class="cta-row">
+        <!-- Replace the mailto with your actual intake address -->
+        <a href="mailto:join@whitemarketunlimited.org?subject=PMA%20Application"
+           class="btn-primary">
+          Request Membership Packet
+        </a>
+
+        <!-- Replace phone if you want the toll-free or direct line here -->
+        <a href="tel:+18883147789" class="btn-ghost">
+          Call for a 10-minute fit check
+        </a>
+      </div>
+    </section>
+
+    <section class="grid-two">
+      <article class="card">
+        <h3>What this PMA is (and is not)</h3>
+        <p>
+          This is a private, member-funded association. You are not “buying a product.”
+          You are entering a standing contract with other members operating under the
+          same covenant: truth, trust, and mutual uplift.
+        </p>
+        <ul>
+          <li>Operates by private contract between members.</li>
+          <li>Focused on health, wealth, education, and real-world outcomes.</li>
+          <li>Not a public charity, not a securities offering, not financial advice.</li>
+          <li>Membership is by invitation and approval only.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Membership signals</h3>
+        <p>
+          We do not care about your résumé. We care about alignment, integrity,
+          and your willingness to both contribute and receive.
+        </p>
+
+        <div class="meta-list">
+          <div>
+            <div class="meta-label">Ideal member</div>
+            <div>
+              Builders, stewards, creators, and protectors who operate by
+              the Golden Rule and are done playing small.
+            </div>
+          </div>
+
+          <div>
+            <div class="meta-label">Expectations</div>
+            <div>
+              Keep confidences, honor contracts, respect fellow members, and
+              move like an adult: no drama, no games.
+            </div>
+          </div>
+
+          <div>
+            <div class="meta-label">Process</div>
+            <div>
+              1) Request packet · 2) Review & complete application ·
+              3) Brief call · 4) Approval & onboarding.
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="legal-footnote">
+      <strong>Private domain notice.</strong>
+      Membership in the White Market Unlimited Private Membership Association
+      is a private contractual relationship between members. All offerings,
+      communications, and interactions are extended exclusively to members
+      and are not open to the general public. Nothing on this page constitutes
+      legal, tax, medical, or investment advice. Always consult your own
+      licensed professionals before acting on any information.
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-wrap">
+      <small>
+        © <span id="year"></span> White Market Unlimited PMA · Private domain · All rights reserved.
+      </small>
+    </div>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>

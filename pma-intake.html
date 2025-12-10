@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PMA Intake Application</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      opacity: 0.9;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+
+    form {
+      display: grid;
+      gap: 1.2rem;
+      margin-top: 1.8rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: #111;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    button {
+      width: max-content;
+      padding: 0.95rem 1.8rem;
+      border-radius: 999px;
+      background: #facc15;
+      border: none;
+      color: #000;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #fde047;
+      transform: translateY(-1px);
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      opacity: 0.65;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>PMA Membership Intake</h1>
+    <p>
+      Complete this private intake form to begin the review process.  
+      Nothing here is public. Your information is handled under private contract.
+    </p>
+
+    <form action="mailto:join@whitemarketunlimited.org" method="POST" enctype="text/plain">
+      <input type="text" name="Full Name" placeholder="Full Name" required />
+      <input type="email" name="Email" placeholder="Email" required />
+      <input type="tel" name="Phone" placeholder="Phone Number" />
+      <textarea name="Intent" placeholder="Describe your intention for joining the PMA" required></textarea>
+      <textarea name="Value" placeholder="What value do you bring into the Association?" required></textarea>
+
+      <button type="submit">Submit Application</button>
+    </form>
+
+    <footer>
+      © <script>document.write(new Date().getFullYear());</script>
+      White Market Unlimited PMA · Private Domain
+    </footer>
+  </div>
+</body>
+</html>
