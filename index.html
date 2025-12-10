@@ -1,400 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /> 
-     <title>Murray Company Limited · Live</title>
-                 
+  <meta charset="UTF-8" />
+  <title>Murray Company Limited · Operating Board</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Murray Company Limited – a connectivity-focused holding platform for private banking, AI concierge, nonprofit impact, media, and hydrogen food systems." />
+  <meta name="description" content="Murray Company Limited – a private operating board connecting banking, media, intelligence, concierge, nonprofit, and field operations." />
+  <link rel="canonical" href="https://murraycompanylimited.com" />
   <style>
-    
-  </style>
-</head>.premiere-banner {
-  margin-top: 16px;
-  padding: 12px 18px;
-  border-radius: 16px;
-  border: 1px solid rgba(245, 193, 91, 0.35);
-  background: rgba(5, 7, 12, 0.88);
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  max-width: 420px;
-}
-.premiere-label {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: var(--accent);
-}
-.premiere-text {
-  font-size: 13px;
-  color: var(--text);
-}
-  </style>
+    :root {
+      --bg: #050608;
+      --card: #101722;
+      --accent: #f5c15b;
+      --text: #f5f7fa;
+      --muted: #9ea8bb;
+      --border: #1e2633;
+      --radius-xl: 26px;
+      --shadow-card: 0 12px 32px rgba(0, 0, 0, 0.5);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      background: radial-gradient(circle at top, #1b293d 0, #050608 55%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 16px 40px;
+    }
+
+    .shell {
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,0.06);
+      background:
+        radial-gradient(circle at top left, rgba(245,193,91,0.14), transparent 55%),
+        rgba(4, 6, 10, 0.96);
+      box-shadow: var(--shadow-card);
+      padding: 22px 18px 26px;
+    }
+
+    /* Nav (loaded from nav.html) */
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 13px;
+    }
+    .top-nav-left {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+    .top-nav-right {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .top-nav-right a {
+      font-size: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(158,168,187,0.45);
+      background: rgba(5,7,12,0.92);
+      color: var(--muted);
+    }
+    .top-nav-right a:hover {
+      border-color: rgba(245,193,91,0.7);
+      color: var(--text);
+    }
+
+    /* Hero */
+    .hero {
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-size: 24px;
+      font-weight: 650;
+      letter-spacing: 0.02em;
+      margin-bottom: 6px;
+    }
+    .hero-sub {
+      font-size: 13px;
+      color: var(--muted);
+      max-width: 36rem;
+    }
+
+    /* Premiere Banner */
+    .premiere-banner {
+      margin-top: 18px;
+      padding: 12px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(245, 193, 91, 0.35);
+      background: rgba(5, 7, 12, 0.9);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      max-width: 420px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.4);
+    }
+    .premiere-label {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .premiere-text {
+      font-size: 13px;
+      color: var(--text);
+      font-weight: 450;
+    }
+
+    /* Board */
+    .board-header {
+      margin-top: 22px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: flex-end;
+    }
+    .board-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+    }
+    .board-note {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .board-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    .project-card {
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.06);
+      background: linear-gradient(140deg, rgba(16,23,34,0.96), rgba(9,12,20,0.98));
+      padding: 12px 12px 11px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: transform 0.1s ease-out, box-shadow 0.1s ease-out, border-color 0.1s ease-out;
+    }
+    .project-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+      border-color: rgba(245,193,91,0.65);
+    }
+    .project-tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+    .project-title {
+      font-size: 15px;
+      font-weight: 550;
+    }
+    .project-copy {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .project-meta {
+      margin-top: 4px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: var(--muted);
+      opacity: 0.85;
+    }
+
+    /* Contact */
+    .contact {
+      margin-top: 22px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
+      gap: 12px;
+      font-size: 13px;
+    }
+    @media (max-width: 720px) {
+      .contact {
+        grid-template-columns: 1fr;
+      }
+    }
+    .contact h2 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .contact p {
+      font-size: 13px;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .contact a {
+      color: var(--accent);
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
 <body>
   <main>
     <div class="shell">
-      <header>
-        <div class="brand-block">
-          <div class="brand-mark">M·C·L</div>
-          <div class="brand-text">
-            <h1>Murray Company Limited</h1>
-            <p>Connectivity • Structure • Private Enterprise</p>
-          </div>
+
+      <!-- Shared Navigation (loaded from nav.html) -->
+      <div id="nav-placeholder"></div>
+      <script>
+        fetch("nav.html")
+          .then(r => r.text())
+          .then(t => {
+            const el = document.getElementById("nav-placeholder");
+            if (el) el.innerHTML = t;
+          })
+          .catch(err => console.error("Nav load error:", err));
+      </script>
+
+      <!-- Hero -->
+      <header class="hero">
+        <h1 class="hero-title">Murray Company Limited</h1>
+        <p class="hero-sub">
+          A private operating board connecting banking, media, intelligence,
+          concierge, nonprofit, and field operations under one hand.
+        </p>
+
+        <div class="premiere-banner">
+          <span class="premiere-label">WORLD PREMIERE</span>
+          <span class="premiere-text">
+            Donnie Dictionary GPT launches Friday at 3:33 PM.
+          </span>
         </div>
-        <nav>
-          <a href="#projects" class="nav-pill">Projects</a>
-          <a href="#contact" class="nav-pill">Contact</a>
-          <a href="about.html" class="nav-pill">About</a>
-          <a href="work.html" class="nav-pill">Work With Us</a>
-        </nav>
-</header>
+      </header>
 
-      <section class="hero">
-        <div>      
-      </div>
-<div class="premiere-banner">
-  <span class="premiere-label">WORLD PREMIERE</span>
-  <span class="premiere-text">Donnie Dictionary GPT launches Friday at 3:33 PM</span>
-</div>
-
-          <h2 class="hero-title">Murray Company Limited</h2>
-          <p class="hero-sub">
-            Murray Company Limited is the connective tissue behind a tight set of private brands:
-            banking, AI concierge, nonprofit impact, media, hydrogen food systems, and more.
-            This page is the master panel – every project below is live on the board.
-          </p>
-          <div class="hero-tags">
-            <div class="hero-tag">Private · Directed · Intentional</div>
-            <div class="hero-tag">Built by Murray</div>
-          </div>
-          <div class="hero-actions">
-            <a href="#projects" class="btn-primary">
-              View Active Projects
-              <span>↗</span>
-            </a>
-            <a href="#contact" class="btn-ghost">
-              Talk with Murray Company Limited
-            </a>
-          </div>
+      <!-- Board -->
+      <section class="board">
+        <div class="board-header">
+          <div class="board-title">Operating Board</div>
+          <div class="board-note">Tap a lane to open its live page.</div>
         </div>
 
-        <aside class="hero-right" aria-label="Signal panel">
-          <div class="hero-right-label">Signal · Internal Use</div>
-          <div class="hero-right-title">Current live channels</div>
-          <ul class="hero-right-list">
-            <li>
-              <span class="hero-right-bullet">•</span>
-              <span>Domain: <strong>murraycompanylimited.com</strong> verified and routing through GitHub Pages.</span>
-            </li>
-            <li>
-              <span class="hero-right-bullet">•</span>
-              <span>Toll-free and direct lines designated for concierge &amp; intake.</span>
-            </li>
-            <li>
-              <span class="hero-right-bullet">•</span>
-                  <div class="mission-strip">
-        <span>Mission:</span>
-        Orchestrate banking, language, hospitality, and human support under one operating board that answers to the Golden Rule.
-      </div>
-
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-              <span>Projects below are wired for <click-to-contact></click-to-contact>
-        </aside>
-      </section>
-
-      <!-- Projects -->
-      <section id="projects" aria-label="Murray Company Limited projects">
-        <div class="section-title-row">
-          <h3 class="section-title">MCL Project Board</h3>
-          <p class="section-sub">Each card is clickable – overview + direct contact from this page.</p>
-        </div>
-
-        <div class="projects-grid">
-          <!-- White Market Unlimited PMA -->
+        <div class="board-grid">
+          <!-- PMA -->
           <a class="project-card" href="pma.html">
-            <div class="project-tag-row">
-              <div class="project-tag">PMA</div>
-              <div class="project-status">Foundational Entity</div>
-            </div>
+            <div class="project-tag">Structure · PMA</div>
             <div class="project-title">White Market Unlimited PMA</div>
-            <div class="project-desc">
-              Private membership association focused on clean, lawful value flow and aligned commerce outside the noise.
+            <div class="project-copy">
+              Private membership shell for people and projects that need lawful,
+              protected space to operate outside noise and hype.
             </div>
             <div class="project-meta">
-              <span class="chip">Membership</span>
-              <span class="chip">Policy-clean</span>
-              <span class="chip">Stewardship</span>
-            </div>
-            <div class="project-actions">
-              <div class="project-link">
-                <span>⟶</span>
-                Overview via MCL
-              </div>
-              <div class="project-contact">
-                <a href="mailto:graceful@murraycompanylimited.com?subject=White%20Market%20Unlimited%20PMA%20Inquiry">Email</a>
-                <span>·</span>
-                <a href="tel:+18883147789">Call</a>
-              </div>
+              <span>Shield</span><span>Members only</span>
             </div>
           </a>
 
-          <!-- DMJR Bank & Trust -->
+          <!-- Bank -->
           <a class="project-card" href="bank.html">
-            <div class="project-tag-row">
-              <div class="project-tag">Private Bank</div>
-              <div class="project-status">Architecture</div>
-            </div>
+            <div class="project-tag">Spine · Bank</div>
             <div class="project-title">DMJR Bank &amp; Trust</div>
-            <div class="project-desc">
-              Quiet, trust-anchored banking concept designed for capital stewardship, not spectacle. Structure before noise.
+            <div class="project-copy">
+              Private banking and trust architecture focused on stewardship,
+              accounting for value, and long-term control of the estate.
             </div>
             <div class="project-meta">
-              <span class="chip">Trust-based</span>
-              <span class="chip">Private office</span>
-            </div>
-            <div class="project-actions">
-              <div class="project-link">
-                <span>⟶</span>
-                Discuss structure
-              </div>
-              <div class="project-contact">
-                <a href="mailto:graceful@murraycompanylimited.com?subject=DMJR%20Bank%20%26%20Trust%20Inquiry">Email</a>
-                <span>·</span>
-                <a href="tel:+18437902922">Direct</a>
-              </div>
+              <span>Ledger</span><span>Trust-side</span>
             </div>
           </a>
 
-          <!-- Graceful Concierge -->
+          <!-- Graceful -->
           <a class="project-card" href="graceful.html">
-            <div class="project-tag-row">
-              <div class="project-tag">AI Concierge</div>
-              <div class="project-status">Operational</div>
-            </div>
+            <div class="project-tag">Service · Concierge</div>
             <div class="project-title">Graceful Concierge</div>
-            <div class="project-desc">
-              Human-level concierge, powered by AI, wired for SMS and email intake to handle planning, copy, and execution.
+            <div class="project-copy">
+              Human-level concierge supported by intelligence tools, handling
+              the calls, bookings, and follow-through that keep life and work moving.
             </div>
             <div class="project-meta">
-              <span class="chip">Concierge</span>
-              <span class="chip">AI-assisted</span>
-              <span class="chip">SMS / Email</span>
-            </div>
-            <div class="project-actions">
-              <div class="project-link">
-                <span>⟶</span>
-                Route through Graceful
-              </div>
-              <div class="project-contact">
-                <a href="mailto:graceful@murraycompanylimited.com?subject=Graceful%20Concierge%20Request">Email</a>
-                <span>·</span>
-                <a href="tel:+18883147789">Toll-free</a>
-              </div>
+              <span>Intake</span><span>Execution</span>
             </div>
           </a>
 
-          <!-- Clan of Murray Human Alliance -->
-          <a class="project-card" href="nonprofit.html">
-            <div class="project-tag-row">
-              <div class="project-tag">Nonprofit</div>
-              <div class="project-status">Mission-Defined</div>
-            </div>
-            <div class="project-title">Clan of Murray Human Alliance</div>
-            <div class="project-desc">
-              Feed the hungry, shelter the homeless, support the work against cancer – operating under the Golden Rule.
-            </div>
-            <div class="project-meta">
-              <span class="chip">Outreach</span>
-              <span class="chip">Human-first</span>
-            </div>
-            <div class="project-actions">
-              <div class="project-link">
-                <span>⟶</span>
-                Explore alliance
-              </div>
-              <div class="project-contact">
-                <a href="mailto:graceful@murraycompanylimited.com?subject=Clan%20of%20Murray%20Human%20Alliance">Email</a>
-                <span>·</span>
-                <a href="tel:+18437902922">Direct</a>
-              </div>
-            </div>
-          </a>
-
-          <!-- Donnie Dictionary (polished) -->
+          <!-- Donnie Dictionary -->
           <a class="project-card" href="dictionary.html">
-            <div class="project-tag-row">
-              <div class="project-tag">Media Lab</div>
-              <div class="project-status">In Studio</div>
-            </div>
+            <div class="project-tag">Language · Lab</div>
             <div class="project-title">Donnie Dictionary</div>
-            <div class="project-desc">
-              A small, focused lexicon lab decoding language, systems, and paperwork – signal briefs only, no fluff, no fear.
+            <div class="project-copy">
+              DDGPT decodes the words that quietly run people’s lives – IDs, forms,
+              contracts, policies – one term at a time, so normal humans can use them.
             </div>
             <div class="project-meta">
-              <span class="chip">Daily word</span>
-              <span class="chip">Decoding</span>
-              <span class="chip">No-nonsense</span>
-            </div>
-            <div class="project-actions">
-              <div class="project-link">
-                <span>⟶</span>
-                Request a word
-              </div>
-              <div class="project-contact">
-                <a href="mailto:graceful@murraycompanylimited.com?subject=Donnie%20Dictionary%20Request">Email</a>
-              </div>
+              <span>DDGPT</span><span>3:33 PM Signal</span>
             </div>
           </a>
 
-          <!-- Phresh Global / Hydrogen Food Network -->
-          <a class="project-card" href="phresh.html">
-            <div class="project-tag-row">
-              <div class="project-tag">Food Network</div>
-              <div class="project-status">Concept · Active</div>
-            </div>
-            <div class="project-title">Phresh Global · Hydrogen Food Network</div>
-            <div class="project-desc">
-              A network vision: hydrogen-powered food trucks feeding communities, backed by real structure and planning.
+          <!-- Nonprofit -->
+          <a class="project-card" href="nonprofit.html">
+            <div class="project-tag">Impact · Nonprofit</div>
+            <div class="project-title">Clan of Murray Human Alliance</div>
+            <div class="project-copy">
+              Human-first lane focused on food, shelter, and real support under the
+              Golden Rule – no theater, just direct help.
             </div>
             <div class="project-meta">
-              <span class="chip">Hydrogen</span>
-              <span class="chip">Mobile food</span>
+              <span>Food &amp; Shelter</span><span>Alliance</span>
             </div>
-            <div class="project-actions">
-              <div class="project-link">
-                <span>⟶</span>
-                Talk expansion
-              </div>
-              <div class="project-contact">
-                <a href="mailto:graceful@murraycompanylimited.com?subject=Phresh%20Global%20Hydrogen%20Network">Email</a>
-                <span>·</span>
-                <a href="tel:+18883147789">Call</a>
-              </div>
+          </a>
+
+          <!-- Phresh -->
+          <a class="project-card" href="phresh.html">
+            <div class="project-tag">Field · Future</div>
+            <div class="project-title">Phresh Global</div>
+            <div class="project-copy">
+              Hydrogen-powered food network vision – mobile, resilient, and built
+              for feeding people at scale.
+            </div>
+            <div class="project-meta">
+              <span>Hydrogen</span><span>Concept build</span>
             </div>
           </a>
 
           <!-- Donnie Discount -->
           <a class="project-card" href="discount.html">
-            <div class="project-tag-row">
-              <div class="project-tag">Ops</div>
-              <div class="project-status">Workhorse</div>
-            </div>
+            <div class="project-tag">Ops · Supply</div>
             <div class="project-title">Donnie Discount</div>
-            <div class="project-desc">
-              Industrial-minded operator lane – sourcing, supply, and problem-solving where the margins actually live.
+            <div class="project-copy">
+              Industrial sourcing and problem-solving lane – finding, moving, and
+              negotiating for the real-world pieces operations need.
             </div>
             <div class="project-meta">
-              <span class="chip">Sourcing</span>
-              <span class="chip">Industrial</span>
-            </div>
-            <div class="project-actions">
-              <div class="project-link">
-                <span>⟶</span>
-                Discuss a job
-              </div>
-              <div class="project-contact">
-                <a href="mailto:graceful@murraycompanylimited.com?subject=Donnie%20Discount%20Work%20Request">Email</a>
-              </div>
+              <span>Sourcing</span><span>Margins</span>
             </div>
           </a>
 
-          <!-- House of Wines Initiative -->
+          <!-- House of Wines -->
           <a class="project-card" href="houseofwines.html">
-            <div class="project-tag-row">
-              <div class="project-tag">Hospitality</div>
-              <div class="project-status">Live Context</div>
-            </div>
-            <div class="project-title">House of Wines · Field Operations</div>
-            <div class="project-desc">
-              Real-time hospitality work used as a testing ground for systems, service flows, and revenue experiments.
+            <div class="project-tag">Live · Lab</div>
+            <div class="project-title">House of Wines</div>
+            <div class="project-copy">
+              Field-operations lab in hospitality – watching humans, flow, and money
+              move in real time, then feeding those lessons back into the board.
             </div>
             <div class="project-meta">
-              <span class="chip">On-the-ground</span>
-              <span class="chip">Systems lab</span>
-            </div>
-            <div class="project-actions">
-              <div class="project-link">
-                <span>⟶</span>
-                Ask about ops
-              </div>
-              <div class="project-contact">
-                <a href="mailto:graceful@murraycompanylimited.com?subject=House%20of%20Wines%20Operations">Email</a>
-              </div>
+              <span>Live floor</span><span>Behavior</span>
             </div>
           </a>
         </div>
       </section>
 
       <!-- Contact -->
-      <section id="contact" class="contact-shell">
-        <div class="contact-title">Contact · Murray Company Limited</div>
-        <div class="contact-main">
-          <div class="contact-left">
-            <p>
-              For any project on this page, reach out through the channels below.
-              This inbox and these lines are monitored for signal, not spam.
-              Be clear about which project you’re asking about, and it will be routed correctly.
-            </p>
-          </div>
-          <div class="contact-right">
-            <div class="contact-label">Email</div>
-            <div class="contact-item">
-              <a href="mailto:graceful@murraycompanylimited.com?subject=MCL%20Portfolio%20Inquiry">
-                graceful@murraycompanylimited.com
-              </a>
-            </div>
-
-            <div class="contact-label" style="margin-top: 8px;">Phone</div>
-            <div class="contact-item">
-              Toll-Free:
-              <a href="tel:+18883147789">+1 (888) 314-7789</a>
-            </div>
-            <div class="contact-item">
-              Direct:
-              <a href="tel:+18437902922">+1 (843) 790-2922</a>
-            </div>
-
-            <div class="contact-label" style="margin-top: 10px;">Scan</div>
-            <div class="contact-item">
-              <img
-                class="contact-qr"
-                src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=Murray%20Company%20Limited%0Ahttps%3A%2F%2Fmurraycompanylimited.com%0AEmail%3A%20graceful%40murraycompanylimited.com%0AToll-Free%3A%20%2B1%28888%29314-7789"
-                alt="QR code for Murray Company Limited contact"
-              />
-            </div>
-          </div>
+      <section id="contact" class="contact">
+        <div>
+          <h2>Contact</h2>
+          <p>
+            Email:
+            <a href="mailto:graceful@murraycompanylimited.com">
+              graceful@murraycompanylimited.com
+            </a>
+          </p>
+          <p>
+            Toll-free:
+            <a href="tel:+18883147789">+1 (888) 314-7789</a>
+            &nbsp;·&nbsp;
+            Direct:
+            <a href="tel:+18437902922">+1 (843) 790-2922</a>
+          </p>
+        </div>
+        <div>
+          <p>
+            For personal matters, operations, or partnership ideas, send a short,
+            specific message. One or two honest paragraphs beats a brochure.
+          </p>
+          <p>
+            Mention which lane you’re speaking from: personal, business, or capital.
+          </p>
         </div>
       </section>
 
-      <footer>
-        <span>© <span id="year"></span> Murray Company Limited · All rights reserved.</span>
-        <span>Quietly operated by Murray.</span>
-      </footer>
     </div>
   </main>
-
-  <script>
-    // Auto-update year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-
-  <!-- Optional privacy-friendly analytics (Plausible).
-       To use: create a site at plausible.io and keep the data-domain as your domain. -->
-  <script defer data-domain="murraycompanylimited.com" src="https://plausible.io/js/script.js"></script>
 </body>
 </html>
