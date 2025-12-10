@@ -130,51 +130,41 @@
 </head>
 <body>
   <main>
-    <div class="shell"><div class="top-nav">
+    <div class="shell">
+      
         <div class="top-nav-left">
           Murray Company Limited
         </div>
-        <div class="top-nav-right">
-          <a href="https://murraycompanylimited.com">Board</a>
-          <a href="https://murraycompanylimited.com/about.html">About</a>
-          <a href="https://murraycompanylimited.com/work.html">Work With Us</a>
-          <a href="https://murraycompanylimited.com#contact">Contact</a>
-         </div>
-      
-     <div id="nav-placeholder"></div>
+   <div id="nav-placeholder"></div>
+</script>
+  fetch("nav.html")
+    .then(response => response.text
 <script>
   fetch("nav.html")
     .then(response => response.text())
+    .then(data => {
+      const el = document.getElementById("nav-placeholder");
+      if (el) el.innerHTML = data;
+    })
+    .catch(err => console.error("Nav load error:", err));
+</script/>
+(response => response.text())
     .then(data => document.getElementById("nav-placeholder").innerHTML = data);
 </script>
 
          </div>
- is about building out a network of mobile food operations that actually feed people –
-          using cleaner energy, smarter routing, and better coordination than “random food truck” energy.
-        </p>
-        <p>
-          It lives at the intersection of logistics, hospitality, energy, and community work.
-        </p>
+  
+<script>
+  fetch("nav.html")
+    .then(response => response.text())
+    .then(data => {
+      const el = document.getElementById("nav-placeholder");
+      if (el) el.innerHTML = data;
+    })
+    .catch(err => console.error("Nav load error:", err));
 
-        <h3>Current focus</h3>
-        <ul>
-          <li>Clarifying the prototype: one truck, one route, one community to serve well.</li>
-          <li>Understanding what hydrogen (or interim energy) setups are realistic in the early stages.</li>
-          <li>Mapping where nonprofit, for-profit, and sponsorship money should interact.</li>
-        </ul>
+</script>
 
-        <h3>How to engage</h3>
-        <p>
-          If you reach out about Phresh Global, say which side you’re on: technology, food operations,
-          capital, or community partner. Each one is a different conversation.
-        </p>
-        <p>
-          Suggested email subject line:<br />
-          <strong>“Phresh Global – [TECH / OPS / CAPITAL / COMMUNITY]”</strong>
-        </p>
-      </section>
-
-      <section class="contact-strip">
         <div>
           Email:
           <a href="mailto:graceful@murraycompanylimited.com?subject=Phresh%20Global%20Hydrogen%20Network">
