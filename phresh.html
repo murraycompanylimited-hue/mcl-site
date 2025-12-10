@@ -141,29 +141,13 @@
           <a href="https://murraycompanylimited.com#contact">Contact</a>
          </div>
       
-     
+     <div id="nav-placeholder"></div>
+<script>
+  fetch("nav.html")
+    .then(response => response.text())
+    .then(data => document.getElementById("nav-placeholder").innerHTML = data);
+</script>
 
-      <header class="project-header">
-        <div class="project-tag">Food Network</div>
-        <h1 class="project-title">Phresh Global · Hydrogen Food Network</h1>
-        <p class="project-sub">
-          A vision for a hydrogen-powered food network: mobile kitchens feeding communities,
-          tied to real structure instead of slogans.
-        </p>
-      </header>
-
-      <section class="project-body">
-        <h3>What this lane is for</h3>
-        <p>
-          This <div class="top-nav">
-        <div class="top-nav-left">
-          Murray Company Limited
-        </div>
-        <div class="top-nav-right">
-          <a href="https://murraycompanylimited.com">Board</a>
-          <a href="https://murraycompanylimited.com/about.html">About</a>
-          <a href="https://murraycompanylimited.com/work.html">Work With Us</a>
-          <a href="https://murraycompanylimited.com#contact">Contact</a>
          </div>
  is about building out a network of mobile food operations that actually feed people –
           using cleaner energy, smarter routing, and better coordination than “random food truck” energy.

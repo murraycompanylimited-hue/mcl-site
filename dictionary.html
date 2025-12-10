@@ -140,18 +140,14 @@
 <body>
   <main>
   </div>     
-    <div class="top-nav">
-        <div class="top-nav-left">
-          Murray Company Limited
-        </div>
-        <div class="top-nav-right">
-          <a href="https://murraycompanylimited.com">Board</a>
-          <a href="https://murraycompanylimited.com/about.html">About</a>
-          <a href="https://murraycompanylimited.com/work.html">Work With Us</a>
-          <a href="https://murraycompanylimited.com#contact">Contact</a>
-        </div>
-      </div>
-      </div>
+    <div id="nav-placeholder"></div>
+<script>
+  fetch("nav.html")
+    .then(response => response.text())
+    .then(data => document.getElementById("nav-placeholder").innerHTML = data);
+</script>
+
+  
 
       <header class="project-header">
         <div class="project-tag">MEDIA LAB</div>
