@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Murray Company Limited · White Market Unlimited</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #e5e7eb;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    header {
+      border-bottom: 1px solid rgba(55,65,81,0.9);
+      background: #020617;
+    }
+
+    .nav {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-title {
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      color: #facc15;
+    }
+
+    .nav-links a {
+      margin-left: 1.4rem;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: #e5e7eb;
+      opacity: 0.9;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    .wrap {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 3.2rem 1.5rem 4.5rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.6rem;
+      color: #facc15;
+    }
+
+    .subhead {
+      font-size: 1.1rem;
+      max-width: 44rem;
+      line-height: 1.7;
+      opacity: 0.93;
+      margin-bottom: 2rem;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-bottom: 2.8rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 1.8rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: #facc15;
+      color: #020617;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.55);
+    }
+
+    .btn-primary:hover {
+      background: #fde047;
+      transform: translateY(-1px);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.65);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: #e5e7eb;
+      border-color: rgba(148,163,184,0.9);
+    }
+
+    .btn-ghost:hover {
+      background: #020617;
+      border-color: #f9fafb;
+      transform: translateY(-1px);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
+      gap: 2rem;
+    }
+
+    .card {
+      padding: 1.9rem 1.7rem;
+      border-radius: 20px;
+      background: #0f0f0f;
+      border: 1px solid rgba(148,163,184,0.9);
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 0.9rem;
+      color: #facc15;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 1.1rem;
+      font-size: 1.02rem;
+      opacity: 0.93;
+    }
+
+    ul {
+      margin-left: 1.1rem;
+      line-height: 1.65;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    footer {
+      margin-top: 3.8rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(55,65,81,0.9);
+      opacity: 0.8;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 860px) {
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      h1 {
+        font-size: 2.4rem;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links a {
+        margin-left: 0;
+        margin-right: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <div class="nav-title">Murray Company Limited · White Market Unlimited</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="donniedictionary.html">Donnie Dictionary</a>
+        <a href="workwithus.html">Work With Us</a>
+        <a href="nexus.html">Nexus</a>
+        <a href="exec.html">Exec</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <h1>Connectivity. Movement. White Market.</h1>
+    <p class="subhead">
+      Murray Company Limited and White Market Unlimited form a private-domain network
+      for real work: language, logistics, food, finance, spiritual lift, and human support.
+      Everything else is noise.
+    </p>
+
+    <div class="btn-row">
+      <a class="btn btn-primary" href="donniedictionary.html">Enter Donnie Dictionary</a>
+      <a class="btn btn-ghost" href="workwithus.html">Work With Us</a>
+      <a class="btn btn-ghost" href="nexus.html">System Map</a>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>What Lives Here</h2>
+        <p>
+          This site is the front door to your ecosystem: Donnie Dictionary, Graceful Concierge,
+          Phresh Global, DMJR Bank & Trust, House of Wines, and the Clan of Murray.
+        </p>
+        <ul>
+          <li>Private-domain, contract-based operations</li>
+          <li>Real-world lanes: food, wine, travel, housing, uplift</li>
+          <li>Digital intelligence: Graceful, Viren, DonnieDictionaryGPT</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Next Move</h2>
+        <p>
+          If you’re here to plug in, start with <strong>Work With Us</strong>.  
+          If you’re here for the words and the signal, start with <strong>Donnie Dictionary</strong>.
+        </p>
+        <ul>
+          <li><strong>Operators / Creators:</strong> Work With Us</li>
+          <li><strong>View the whole system:</strong> Nexus & Exec</li>
+          <li><strong>Decode language:</strong> Donnie Dictionary</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      © <script>document.write(new Date().getFullYear());</script>
+      Murray Company Limited · White Market Unlimited  
+      · Private-domain operations. No public offers.
+    </footer>
+  </div>
+</body>
+</html>
