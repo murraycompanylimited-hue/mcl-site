@@ -55,7 +55,6 @@
     .snodeGold{fill:rgba(250,204,21,.10);stroke:rgba(250,204,21,.35)}
     .stext{fill:rgba(229,231,235,.92);font-size:14px;font-weight:800;letter-spacing:.3px}
     .stext2{fill:rgba(229,231,235,.70);font-size:12px;font-weight:650}
-    .linkhint{color:var(--muted);margin-top:10px;font-size:.95rem;line-height:1.5}
     .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
     .btn{
       display:inline-flex;align-items:center;justify-content:center;
@@ -68,7 +67,6 @@
     /* SVG interactivity */
     .hot{cursor:pointer}
     .hot:hover rect{filter:brightness(1.15)}
-    .hot:focus rect{outline:none}
     .note{color:rgba(229,231,235,.55);font-size:.92rem;margin-top:10px}
   </style>
 </head>
@@ -89,19 +87,28 @@
 
     <h1>System Map</h1>
     <p class="sub">
-      Click any node to navigate. This is the control panel: signal, intake, operating lanes, compliance.
+      Click any node. Operating Lanes are split into WMU, Phresh, and Nonprofit.
     </p>
 
     <div class="card">
       <div class="map" aria-label="System map diagram">
-        <svg viewBox="0 0 980 420" role="img">
+        <svg viewBox="0 0 980 460" role="img">
           <!-- lines -->
           <line class="sline" x1="490" y1="90" x2="200" y2="200"/>
           <line class="sline" x1="490" y1="90" x2="490" y2="200"/>
           <line class="sline" x1="490" y1="90" x2="780" y2="200"/>
-          <line class="sline" x1="200" y1="260" x2="490" y2="340"/>
-          <line class="sline" x1="490" y1="260" x2="490" y2="340"/>
-          <line class="sline" x1="780" y1="260" x2="490" y2="340"/>
+
+          <!-- split lane lines -->
+          <line class="sline" x1="780" y1="250" x2="670" y2="330"/>
+          <line class="sline" x1="780" y1="250" x2="780" y2="330"/>
+          <line class="sline" x1="780" y1="250" x2="890" y2="330"/>
+
+          <!-- bottom compliance lines -->
+          <line class="sline" x1="200" y1="260" x2="490" y2="390"/>
+          <line class="sline" x1="490" y1="260" x2="490" y2="390"/>
+          <line class="sline" x1="670" y1="390" x2="490" y2="390"/>
+          <line class="sline" x1="780" y1="390" x2="490" y2="390"/>
+          <line class="sline" x1="890" y1="390" x2="490" y2="390"/>
 
           <!-- TOP: Index -->
           <a class="hot" href="index.html" aria-label="Go to Home (Index)">
@@ -126,19 +133,37 @@
             <text class="stext2" x="490" y="258" text-anchor="middle">workwithus.html</text>
           </a>
 
-          <!-- RIGHT: Operating Lanes (goes to WMU as the parent lane) -->
-          <a class="hot" href="whitemarket.html" aria-label="Go to White Market (Operating Lanes)">
-            <rect class="snode" x="650" y="180" rx="14" ry="14" width="260" height="90"/>
-            <text class="stext" x="780" y="214" text-anchor="middle">OPERATING LANES</text>
-            <text class="stext2" x="780" y="236" text-anchor="middle">WMU / Phresh / Nonprofit</text>
-            <text class="stext2" x="780" y="258" text-anchor="middle">whitemarket.html</text>
+          <!-- RIGHT: Operating Lanes (parent) -->
+          <rect class="snode" x="650" y="180" rx="14" ry="14" width="260" height="90"/>
+          <text class="stext" x="780" y="214" text-anchor="middle">OPERATING LANES</text>
+          <text class="stext2" x="780" y="236" text-anchor="middle">WMU / Phresh / Nonprofit</text>
+          <text class="stext2" x="780" y="258" text-anchor="middle">split below</text>
+
+          <!-- SPLIT: WMU -->
+          <a class="hot" href="whitemarket.html" aria-label="Go to White Market Unlimited">
+            <rect class="snode" x="560" y="320" rx="14" ry="14" width="220" height="70"/>
+            <text class="stext" x="670" y="350" text-anchor="middle">WHITE MARKET</text>
+            <text class="stext2" x="670" y="372" text-anchor="middle">whitemarket.html</text>
+          </a>
+
+          <!-- SPLIT: Phresh -->
+          <a class="hot" href="phreshglobal.html" aria-label="Go to Phresh Global">
+            <rect class="snode" x="670" y="320" rx="14" ry="14" width="220" height="70"/>
+            <text class="stext" x="780" y="350" text-anchor="middle">PHRESH GLOBAL</text>
+            <text class="stext2" x="780" y="372" text-anchor="middle">phreshglobal.html</text>
+          </a>
+
+          <!-- SPLIT: Nonprofit -->
+          <a class="hot" href="nonprofit.html" aria-label="Go to Nonprofit">
+            <rect class="snode" x="780" y="320" rx="14" ry="14" width="220" height="70"/>
+            <text class="stext" x="890" y="350" text-anchor="middle">NONPROFIT</text>
+            <text class="stext2" x="890" y="372" text-anchor="middle">nonprofit.html</text>
           </a>
 
           <!-- BOTTOM: Compliance -->
           <a class="hot" href="terms.html" aria-label="Go to Terms (Compliance and Consent)">
-            <rect class="snode" x="290" y="320" rx="14" ry="14" width="400" height="80"/>
-            <text class="stext" x="490" y="354" text-anchor="middle">COMPLIANCE + CONSENT</text>
-            <text class="stext2" x="490" y="376" text-anchor="middle">terms · privacy · sms-consent</text>
+            <rect class="snode" x="290" y="395" rx="14" ry="14" width="400" height="55"/>
+            <text class="stext" x="490" y="428" text-anchor="middle">COMPLIANCE + CONSENT · terms · privacy · sms-consent</text>
           </a>
         </svg>
       </div>
@@ -155,8 +180,7 @@
       </div>
 
       <div class="note">
-        If you want separate clickable nodes for Phresh and Nonprofit inside the SVG (not just buttons),
-        say “split lanes”.
+        Next expansion: add DMJR Bank & Trust, Clan of Murray, and Graceful as dedicated nodes.
       </div>
     </div>
   </div>
