@@ -2,11 +2,163 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="refresh" content="0; url=index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Redirecting…</title>
+  <title>System Map · Nexus</title>
+  <style>
+    :root{
+      --bg:#020617; --ink:#E5E7EB; --muted:rgba(229,231,235,.72);
+      --blue:#38BDF8; --gold:#FACC15;
+      --card:rgba(255,255,255,.06); --border:rgba(255,255,255,.12);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1100px 560px at 18% 12%, rgba(56,189,248,.18), transparent 60%),
+                  radial-gradient(900px 520px at 82% 22%, rgba(250,204,21,.12), transparent 55%),
+                  var(--bg);
+      color:var(--ink);
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1120px;margin:0 auto;padding:22px 18px 60px}
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+      padding:12px 0;margin-bottom:18px;border-bottom:1px solid var(--border);
+    }
+    .brand{display:flex;flex-direction:column;gap:4px}
+    .brand strong{letter-spacing:.6px}
+    .brand span{color:var(--muted);font-size:.95rem}
+    .nav{display:flex;gap:14px;flex-wrap:wrap}
+    .nav a{color:var(--muted)}
+    .nav a:hover{color:var(--ink)}
+    h1{margin:10px 0 8px;font-size:2.2rem}
+    .sub{color:var(--muted);line-height:1.6;margin:0 0 16px}
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:16px;
+      box-shadow: 0 10px 24px rgba(0,0,0,.26);
+    }
+    .map{
+      width:100%;
+      overflow:auto;
+      border:1px solid var(--border);
+      border-radius:16px;
+      background:rgba(0,0,0,.22);
+      padding:14px;
+    }
+    svg{max-width:100%;height:auto}
+    .sline{stroke:rgba(229,231,235,.26);stroke-width:1.2}
+    .snode{fill:rgba(255,255,255,.06);stroke:rgba(255,255,255,.18);stroke-width:1.2}
+    .snodeBlue{fill:rgba(56,189,248,.10);stroke:rgba(56,189,248,.35)}
+    .snodeGold{fill:rgba(250,204,21,.10);stroke:rgba(250,204,21,.35)}
+    .stext{fill:rgba(229,231,235,.92);font-size:14px;font-weight:800;letter-spacing:.3px}
+    .stext2{fill:rgba(229,231,235,.70);font-size:12px;font-weight:650}
+    .linkhint{color:var(--muted);margin-top:10px;font-size:.95rem;line-height:1.5}
+    .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:10px 14px;border-radius:12px;border:1px solid var(--border);
+      background:rgba(255,255,255,.04);font-weight:800;color:var(--ink)
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{border-color:rgba(56,189,248,.35);background:rgba(56,189,248,.14)}
+    .btn.gold{border-color:rgba(250,204,21,.35);background:rgba(250,204,21,.12)}
+    /* SVG interactivity */
+    .hot{cursor:pointer}
+    .hot:hover rect{filter:brightness(1.15)}
+    .hot:focus rect{outline:none}
+    .note{color:rgba(229,231,235,.55);font-size:.92rem;margin-top:10px}
+  </style>
 </head>
 <body>
-  <p>Redirecting… If you are not redirected, <a href="index.html">click here</a>.</p>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <strong>NEXUS · SYSTEM MAP</strong>
+        <span>Murray Company Limited · White Market Unlimited</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="donniedictionary.html">Donnie Dictionary</a>
+        <a href="workwithus.html">Work With Us</a>
+        <a href="nexus.html" style="color:#E5E7EB">System Map</a>
+      </nav>
+    </header>
+
+    <h1>System Map</h1>
+    <p class="sub">
+      Click any node to navigate. This is the control panel: signal, intake, operating lanes, compliance.
+    </p>
+
+    <div class="card">
+      <div class="map" aria-label="System map diagram">
+        <svg viewBox="0 0 980 420" role="img">
+          <!-- lines -->
+          <line class="sline" x1="490" y1="90" x2="200" y2="200"/>
+          <line class="sline" x1="490" y1="90" x2="490" y2="200"/>
+          <line class="sline" x1="490" y1="90" x2="780" y2="200"/>
+          <line class="sline" x1="200" y1="260" x2="490" y2="340"/>
+          <line class="sline" x1="490" y1="260" x2="490" y2="340"/>
+          <line class="sline" x1="780" y1="260" x2="490" y2="340"/>
+
+          <!-- TOP: Index -->
+          <a class="hot" href="index.html" aria-label="Go to Home (Index)">
+            <rect class="snodeGold" x="350" y="40" rx="14" ry="14" width="280" height="70"/>
+            <text class="stext" x="490" y="72" text-anchor="middle">INDEX · FRONT DOOR</text>
+            <text class="stext2" x="490" y="94" text-anchor="middle">Hub / routing / board</text>
+          </a>
+
+          <!-- LEFT: Donnie Dictionary -->
+          <a class="hot" href="donniedictionary.html" aria-label="Go to Donnie Dictionary">
+            <rect class="snodeBlue" x="70" y="180" rx="14" ry="14" width="260" height="90"/>
+            <text class="stext" x="200" y="214" text-anchor="middle">DONNIE DICTIONARY</text>
+            <text class="stext2" x="200" y="236" text-anchor="middle">Daily word drops / media</text>
+            <text class="stext2" x="200" y="258" text-anchor="middle">donniedictionary.html</text>
+          </a>
+
+          <!-- MID: Work With Us -->
+          <a class="hot" href="workwithus.html" aria-label="Go to Work With Us">
+            <rect class="snodeGold" x="350" y="180" rx="14" ry="14" width="280" height="90"/>
+            <text class="stext" x="490" y="214" text-anchor="middle">WORK WITH US</text>
+            <text class="stext2" x="490" y="236" text-anchor="middle">Operator / creator intake</text>
+            <text class="stext2" x="490" y="258" text-anchor="middle">workwithus.html</text>
+          </a>
+
+          <!-- RIGHT: Operating Lanes (goes to WMU as the parent lane) -->
+          <a class="hot" href="whitemarket.html" aria-label="Go to White Market (Operating Lanes)">
+            <rect class="snode" x="650" y="180" rx="14" ry="14" width="260" height="90"/>
+            <text class="stext" x="780" y="214" text-anchor="middle">OPERATING LANES</text>
+            <text class="stext2" x="780" y="236" text-anchor="middle">WMU / Phresh / Nonprofit</text>
+            <text class="stext2" x="780" y="258" text-anchor="middle">whitemarket.html</text>
+          </a>
+
+          <!-- BOTTOM: Compliance -->
+          <a class="hot" href="terms.html" aria-label="Go to Terms (Compliance and Consent)">
+            <rect class="snode" x="290" y="320" rx="14" ry="14" width="400" height="80"/>
+            <text class="stext" x="490" y="354" text-anchor="middle">COMPLIANCE + CONSENT</text>
+            <text class="stext2" x="490" y="376" text-anchor="middle">terms · privacy · sms-consent</text>
+          </a>
+        </svg>
+      </div>
+
+      <div class="btnrow">
+        <a class="btn primary" href="donniedictionary.html">Donnie Dictionary</a>
+        <a class="btn gold" href="workwithus.html">Work With Us</a>
+        <a class="btn" href="whitemarket.html">White Market</a>
+        <a class="btn" href="phreshglobal.html">Phresh Global</a>
+        <a class="btn" href="nonprofit.html">Nonprofit</a>
+        <a class="btn" href="terms.html">Terms</a>
+        <a class="btn" href="privacy.html">Privacy</a>
+        <a class="btn" href="sms-consent.html">SMS Consent</a>
+      </div>
+
+      <div class="note">
+        If you want separate clickable nodes for Phresh and Nonprofit inside the SVG (not just buttons),
+        say “split lanes”.
+      </div>
+    </div>
+  </div>
 </body>
 </html>
