@@ -64,7 +64,6 @@
     .btn:hover{transform:translateY(-1px)}
     .btn.primary{border-color:rgba(56,189,248,.35);background:rgba(56,189,248,.14)}
     .btn.gold{border-color:rgba(250,204,21,.35);background:rgba(250,204,21,.12)}
-    /* SVG interactivity */
     .hot{cursor:pointer}
     .hot:hover rect{filter:brightness(1.15)}
     .note{color:rgba(229,231,235,.55);font-size:.92rem;margin-top:10px}
@@ -87,83 +86,103 @@
 
     <h1>System Map</h1>
     <p class="sub">
-      Click any node. Operating Lanes are split into WMU, Phresh, and Nonprofit.
+      Click any node. Top layer is Governance + Finance. Middle is Signal + Intake. Right splits into Operating Lanes.
     </p>
 
     <div class="card">
       <div class="map" aria-label="System map diagram">
-        <svg viewBox="0 0 980 460" role="img">
-          <!-- lines -->
-          <line class="sline" x1="490" y1="90" x2="200" y2="200"/>
-          <line class="sline" x1="490" y1="90" x2="490" y2="200"/>
-          <line class="sline" x1="490" y1="90" x2="780" y2="200"/>
+        <svg viewBox="0 0 980 560" role="img">
+          <!-- governance/finance lines down to index -->
+          <line class="sline" x1="200" y1="110" x2="490" y2="170"/>
+          <line class="sline" x1="490" y1="110" x2="490" y2="170"/>
+          <line class="sline" x1="780" y1="110" x2="490" y2="170"/>
+
+          <!-- index to mid nodes -->
+          <line class="sline" x1="490" y1="230" x2="200" y2="320"/>
+          <line class="sline" x1="490" y1="230" x2="490" y2="320"/>
+          <line class="sline" x1="490" y1="230" x2="780" y2="320"/>
 
           <!-- split lane lines -->
-          <line class="sline" x1="780" y1="250" x2="670" y2="330"/>
-          <line class="sline" x1="780" y1="250" x2="780" y2="330"/>
-          <line class="sline" x1="780" y1="250" x2="890" y2="330"/>
+          <line class="sline" x1="780" y1="370" x2="670" y2="450"/>
+          <line class="sline" x1="780" y1="370" x2="780" y2="450"/>
+          <line class="sline" x1="780" y1="370" x2="890" y2="450"/>
 
           <!-- bottom compliance lines -->
-          <line class="sline" x1="200" y1="260" x2="490" y2="390"/>
-          <line class="sline" x1="490" y1="260" x2="490" y2="390"/>
-          <line class="sline" x1="670" y1="390" x2="490" y2="390"/>
-          <line class="sline" x1="780" y1="390" x2="490" y2="390"/>
-          <line class="sline" x1="890" y1="390" x2="490" y2="390"/>
+          <line class="sline" x1="200" y1="400" x2="490" y2="520"/>
+          <line class="sline" x1="490" y1="400" x2="490" y2="520"/>
+          <line class="sline" x1="670" y1="520" x2="490" y2="520"/>
+          <line class="sline" x1="780" y1="520" x2="490" y2="520"/>
+          <line class="sline" x1="890" y1="520" x2="490" y2="520"/>
 
-          <!-- TOP: Index -->
+          <!-- TOP LAYER -->
+          <a class="hot" href="exec.html" aria-label="Exec (Governance)">
+            <rect class="snodeGold" x="70" y="55" rx="14" ry="14" width="260" height="70"/>
+            <text class="stext" x="200" y="88" text-anchor="middle">EXEC</text>
+            <text class="stext2" x="200" y="110" text-anchor="middle">Governance / command layer</text>
+          </a>
+
+          <a class="hot" href="dmjrbankandtrust.html" aria-label="DMJR Bank and Trust (Finance)">
+            <rect class="snode" x="350" y="55" rx="14" ry="14" width="280" height="70"/>
+            <text class="stext" x="490" y="88" text-anchor="middle">DMJR BANK &amp; TRUST</text>
+            <text class="stext2" x="490" y="110" text-anchor="middle">Finance / custody / instruments</text>
+          </a>
+
+          <a class="hot" href="clanofmurray.html" aria-label="Clan of Murray (Governance Community)">
+            <rect class="snode" x="650" y="55" rx="14" ry="14" width="260" height="70"/>
+            <text class="stext" x="780" y="88" text-anchor="middle">CLAN OF MURRAY</text>
+            <text class="stext2" x="780" y="110" text-anchor="middle">Alliance / mission / people</text>
+          </a>
+
+          <!-- INDEX HUB -->
           <a class="hot" href="index.html" aria-label="Go to Home (Index)">
-            <rect class="snodeGold" x="350" y="40" rx="14" ry="14" width="280" height="70"/>
-            <text class="stext" x="490" y="72" text-anchor="middle">INDEX · FRONT DOOR</text>
-            <text class="stext2" x="490" y="94" text-anchor="middle">Hub / routing / board</text>
+            <rect class="snodeGold" x="350" y="170" rx="14" ry="14" width="280" height="70"/>
+            <text class="stext" x="490" y="202" text-anchor="middle">INDEX · FRONT DOOR</text>
+            <text class="stext2" x="490" y="224" text-anchor="middle">Hub / routing / board</text>
           </a>
 
-          <!-- LEFT: Donnie Dictionary -->
+          <!-- MID NODES -->
           <a class="hot" href="donniedictionary.html" aria-label="Go to Donnie Dictionary">
-            <rect class="snodeBlue" x="70" y="180" rx="14" ry="14" width="260" height="90"/>
-            <text class="stext" x="200" y="214" text-anchor="middle">DONNIE DICTIONARY</text>
-            <text class="stext2" x="200" y="236" text-anchor="middle">Daily word drops / media</text>
-            <text class="stext2" x="200" y="258" text-anchor="middle">donniedictionary.html</text>
+            <rect class="snodeBlue" x="70" y="300" rx="14" ry="14" width="260" height="90"/>
+            <text class="stext" x="200" y="334" text-anchor="middle">DONNIE DICTIONARY</text>
+            <text class="stext2" x="200" y="356" text-anchor="middle">Daily word drops / media</text>
+            <text class="stext2" x="200" y="378" text-anchor="middle">donniedictionary.html</text>
           </a>
 
-          <!-- MID: Work With Us -->
           <a class="hot" href="workwithus.html" aria-label="Go to Work With Us">
-            <rect class="snodeGold" x="350" y="180" rx="14" ry="14" width="280" height="90"/>
-            <text class="stext" x="490" y="214" text-anchor="middle">WORK WITH US</text>
-            <text class="stext2" x="490" y="236" text-anchor="middle">Operator / creator intake</text>
-            <text class="stext2" x="490" y="258" text-anchor="middle">workwithus.html</text>
+            <rect class="snodeGold" x="350" y="300" rx="14" ry="14" width="280" height="90"/>
+            <text class="stext" x="490" y="334" text-anchor="middle">WORK WITH US</text>
+            <text class="stext2" x="490" y="356" text-anchor="middle">Operator / creator intake</text>
+            <text class="stext2" x="490" y="378" text-anchor="middle">workwithus.html</text>
           </a>
 
-          <!-- RIGHT: Operating Lanes (parent) -->
-          <rect class="snode" x="650" y="180" rx="14" ry="14" width="260" height="90"/>
-          <text class="stext" x="780" y="214" text-anchor="middle">OPERATING LANES</text>
-          <text class="stext2" x="780" y="236" text-anchor="middle">WMU / Phresh / Nonprofit</text>
-          <text class="stext2" x="780" y="258" text-anchor="middle">split below</text>
+          <rect class="snode" x="650" y="300" rx="14" ry="14" width="260" height="90"/>
+          <text class="stext" x="780" y="334" text-anchor="middle">OPERATING LANES</text>
+          <text class="stext2" x="780" y="356" text-anchor="middle">WMU / Phresh / Nonprofit</text>
+          <text class="stext2" x="780" y="378" text-anchor="middle">split below</text>
 
-          <!-- SPLIT: WMU -->
-          <a class="hot" href="whitemarket.html" aria-label="Go to White Market Unlimited">
-            <rect class="snode" x="560" y="320" rx="14" ry="14" width="220" height="70"/>
-            <text class="stext" x="670" y="350" text-anchor="middle">WHITE MARKET</text>
-            <text class="stext2" x="670" y="372" text-anchor="middle">whitemarket.html</text>
+          <!-- SPLIT LANES -->
+          <a class="hot" href="whitemarket.html" aria-label="White Market Unlimited">
+            <rect class="snode" x="560" y="445" rx="14" ry="14" width="220" height="70"/>
+            <text class="stext" x="670" y="475" text-anchor="middle">WHITE MARKET</text>
+            <text class="stext2" x="670" y="497" text-anchor="middle">whitemarket.html</text>
           </a>
 
-          <!-- SPLIT: Phresh -->
-          <a class="hot" href="phreshglobal.html" aria-label="Go to Phresh Global">
-            <rect class="snode" x="670" y="320" rx="14" ry="14" width="220" height="70"/>
-            <text class="stext" x="780" y="350" text-anchor="middle">PHRESH GLOBAL</text>
-            <text class="stext2" x="780" y="372" text-anchor="middle">phreshglobal.html</text>
+          <a class="hot" href="phreshglobal.html" aria-label="Phresh Global">
+            <rect class="snode" x="670" y="445" rx="14" ry="14" width="220" height="70"/>
+            <text class="stext" x="780" y="475" text-anchor="middle">PHRESH GLOBAL</text>
+            <text class="stext2" x="780" y="497" text-anchor="middle">phreshglobal.html</text>
           </a>
 
-          <!-- SPLIT: Nonprofit -->
-          <a class="hot" href="nonprofit.html" aria-label="Go to Nonprofit">
-            <rect class="snode" x="780" y="320" rx="14" ry="14" width="220" height="70"/>
-            <text class="stext" x="890" y="350" text-anchor="middle">NONPROFIT</text>
-            <text class="stext2" x="890" y="372" text-anchor="middle">nonprofit.html</text>
+          <a class="hot" href="nonprofit.html" aria-label="Nonprofit">
+            <rect class="snode" x="780" y="445" rx="14" ry="14" width="220" height="70"/>
+            <text class="stext" x="890" y="475" text-anchor="middle">NONPROFIT</text>
+            <text class="stext2" x="890" y="497" text-anchor="middle">nonprofit.html</text>
           </a>
 
-          <!-- BOTTOM: Compliance -->
-          <a class="hot" href="terms.html" aria-label="Go to Terms (Compliance and Consent)">
-            <rect class="snode" x="290" y="395" rx="14" ry="14" width="400" height="55"/>
-            <text class="stext" x="490" y="428" text-anchor="middle">COMPLIANCE + CONSENT · terms · privacy · sms-consent</text>
+          <!-- COMPLIANCE -->
+          <a class="hot" href="terms.html" aria-label="Terms (Compliance and Consent)">
+            <rect class="snode" x="210" y="515" rx="14" ry="14" width="560" height="40"/>
+            <text class="stext" x="490" y="542" text-anchor="middle">COMPLIANCE + CONSENT · terms · privacy · sms-consent</text>
           </a>
         </svg>
       </div>
@@ -171,6 +190,9 @@
       <div class="btnrow">
         <a class="btn primary" href="donniedictionary.html">Donnie Dictionary</a>
         <a class="btn gold" href="workwithus.html">Work With Us</a>
+        <a class="btn" href="exec.html">Exec</a>
+        <a class="btn" href="dmjrbankandtrust.html">DMJR Bank &amp; Trust</a>
+        <a class="btn" href="clanofmurray.html">Clan of Murray</a>
         <a class="btn" href="whitemarket.html">White Market</a>
         <a class="btn" href="phreshglobal.html">Phresh Global</a>
         <a class="btn" href="nonprofit.html">Nonprofit</a>
@@ -180,7 +202,7 @@
       </div>
 
       <div class="note">
-        Next expansion: add DMJR Bank & Trust, Clan of Murray, and Graceful as dedicated nodes.
+        If you want Graceful added as a node, tell me what file name you want (e.g., graceful.html) and I’ll wire it.
       </div>
     </div>
   </div>
