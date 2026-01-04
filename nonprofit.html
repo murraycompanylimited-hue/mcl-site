@@ -6,7 +6,8 @@
  <meta name="viewport" content="width=device-width, initial-scale=1" />
  <meta name="description" content="Clan of Murray Human Alliance – a nonprofit lane focused on feeding, housing, and supporting humans under the Golden Rule." />
  <link rel="canonical" href="https://murraycompanylimited.com/nonprofit.html" />
- <style>
+ <link rel="stylesheet" href="css/style.css" />
+  <style>
 :root {
  --bg: #050608;
  --card: #101722;
@@ -123,26 +124,26 @@
  </style>
 </head>
 <body>
+  <div id="site-nav"></div>
+  <script>
+    (function(){
+      var host = document.getElementById("site-nav");
+      if(!host) return;
+      fetch("nav.html", { cache: "no-store" })
+        .then(function(r){ return r.text(); })
+        .then(function(html){ host.innerHTML = html; })
+        .catch(function(){
+          host.innerHTML = "<div class=\"wrap\"><div class=\"card\"><a class=\"btn\" href=\"index.html\">Home</a> <a class=\"btn\" href=\"workwithus.html\">Work With Us</a></div></div>";
+        });
+    })();
+  </script>
  <main>
  <div id="nav-placeholder"></div>
-<script>
- fetch("nav.html")
-.then(response => response.text())
-.then(data => {
- const el = document.getElementById("nav-placeholder");
- if (el) el.innerHTML = data;
- })
-.catch(err => console.error("Nav load error:", err));
-</script>
 
  
  </div>
  
-<script>
- fetch("nav.html")
-.then(response => response.text())
-.then(data => document.getElementById("nav-placeholder").innerHTML = data);
-</script>
+
 ss="project-header">
  <div class="project-tag">Nonprofit</div>
  <h1 class="project-title">Clan of Murray Human Alliance</h1>
