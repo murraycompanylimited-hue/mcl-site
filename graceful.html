@@ -1,236 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Graceful Concierge · Murray Company Limited</title>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <title>Graceful Concierge · Murray Company Limited</title>
 
-  <style>
-    body {
-      margin: 0;
-      background: #020617;
-      color: #f9fafb;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    }
+ <style>
+ body {
+ margin: 0;
+ background: #020617;
+ color: #f9fafb;
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+ }
 
-    .wrap {
-      max-width: 1150px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem 4rem;
-    }
+.wrap {
+ max-width: 1150px;
+ margin: 0 auto;
+ padding: 3rem 1.5rem 4rem;
+ }
 
-    .tag {
-      display: inline-block;
-      padding: 0.45rem 1rem;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.9);
-      border: 1px solid rgba(148,163,184,0.8);
-      font-size: 0.85rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 1.6rem;
-      opacity: 0.95;
-    }
+.tag {
+ display: inline-block;
+ padding: 0.45rem 1rem;
+ border-radius: 999px;
+ background: rgba(15,23,42,0.9);
+ border: 1px solid rgba(148,163,184,0.8);
+ font-size: 0.85rem;
+ letter-spacing: 0.08em;
+ text-transform: uppercase;
+ margin-bottom: 1.6rem;
+ opacity: 0.95;
+ }
 
-    h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.6rem;
-    }
+ h1 {
+ font-size: 3rem;
+ font-weight: 700;
+ letter-spacing: -0.02em;
+ margin-bottom: 0.6rem;
+ }
 
-    h2 {
-      font-size: 1.7rem;
-      font-weight: 600;
-      margin-top: 2.4rem;
-      margin-bottom: 0.75rem;
-    }
+ h2 {
+ font-size: 1.7rem;
+ font-weight: 600;
+ margin-top: 2.4rem;
+ margin-bottom: 0.75rem;
+ }
 
-    p {
-      line-height: 1.7;
-      margin-bottom: 1.3rem;
-      font-size: 1.03rem;
-      opacity: 0.92;
-    }
+ p {
+ line-height: 1.7;
+ margin-bottom: 1.3rem;
+ font-size: 1.03rem;
+ opacity: 0.92;
+ }
 
-    .sublead {
-      font-size: 1.1rem;
-      max-width: 40rem;
-    }
+.sublead {
+ font-size: 1.1rem;
+ max-width: 40rem;
+ }
 
-    .grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
-      gap: 2rem;
-      margin-top: 2.4rem;
-    }
+.grid {
+ display: grid;
+ grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
+ gap: 2rem;
+ margin-top: 2.4rem;
+ }
 
-    .card {
-      padding: 1.9rem 1.7rem;
-      border-radius: 20px;
-      background: radial-gradient(circle at top left, rgba(148,163,184,0.2), rgba(15,23,42,1));
-      border: 1px solid rgba(148,163,184,0.5);
-    }
+.card {
+ padding: 1.9rem 1.7rem;
+ border-radius: 20px;
+ background: radial-gradient(circle at top left, rgba(148,163,184,0.2), rgba(15,23,42,1));
+ border: 1px solid rgba(148,163,184,0.5);
+ }
 
-    ul {
-      margin-left: 1.1rem;
-      line-height: 1.65;
-      font-size: 1rem;
-      opacity: 0.9;
-    }
+ ul {
+ margin-left: 1.1rem;
+ line-height: 1.65;
+ font-size: 1rem;
+ opacity: 0.9;
+ }
 
-    .contact-block {
-      margin-top: 1.3rem;
-      font-size: 0.98rem;
-      line-height: 1.6;
-    }
+.contact-block {
+ margin-top: 1.3rem;
+ font-size: 0.98rem;
+ line-height: 1.6;
+ }
 
-    .label {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.09em;
-      opacity: 0.7;
-    }
+.label {
+ font-size: 0.8rem;
+ text-transform: uppercase;
+ letter-spacing: 0.09em;
+ opacity: 0.7;
+ }
 
-    .btn-row {
-      margin-top: 1.8rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.9rem;
-    }
+.btn-row {
+ margin-top: 1.8rem;
+ display: flex;
+ flex-wrap: wrap;
+ gap: 0.9rem;
+ }
 
-    .btn {
-      display: inline-block;
-      padding: 0.9rem 1.8rem;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      border: none;
-      cursor: pointer;
-      transition: 0.2s;
-    }
+.btn {
+ display: inline-block;
+ padding: 0.9rem 1.8rem;
+ border-radius: 999px;
+ text-decoration: none;
+ font-weight: 600;
+ font-size: 0.95rem;
+ letter-spacing: 0.08em;
+ text-transform: uppercase;
+ border: none;
+ cursor: pointer;
+ transition: 0.2s;
+ }
 
-    .btn-primary {
-      background: #eab308;
-      color: #020617;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.55);
-    }
+.btn-primary {
+ background: #eab308;
+ color: #020617;
+ box-shadow: 0 14px 30px rgba(0,0,0,0.55);
+ }
 
-    .btn-primary:hover {
-      background: #facc15;
-      transform: translateY(-1px);
-      box-shadow: 0 18px 36px rgba(0,0,0,0.7);
-    }
+.btn-primary:hover {
+ background: #facc15;
+ transform: translateY(-1px);
+ box-shadow: 0 18px 36px rgba(0,0,0,0.7);
+ }
 
-    .btn-ghost {
-      background: rgba(15,23,42,0.9);
-      color: #e5e7eb;
-      border: 1px solid rgba(148,163,184,0.7);
-    }
+.btn-ghost {
+ background: rgba(15,23,42,0.9);
+ color: #e5e7eb;
+ border: 1px solid rgba(148,163,184,0.7);
+ }
 
-    .btn-ghost:hover {
-      background: rgba(15,23,42,1);
-      transform: translateY(-1px);
-      border-color: #f9fafb;
-    }
+.btn-ghost:hover {
+ background: rgba(15,23,42,1);
+ transform: translateY(-1px);
+ border-color: #f9fafb;
+ }
 
-    footer {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(30,64,175,0.7);
-      opacity: 0.8;
-      font-size: 0.9rem;
-      line-height: 1.6;
-    }
+ footer {
+ margin-top: 4rem;
+ padding-top: 2rem;
+ border-top: 1px solid rgba(30,64,175,0.7);
+ opacity: 0.8;
+ font-size: 0.9rem;
+ line-height: 1.6;
+ }
 
-    @media (max-width: 800px) {
-      .grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
+ @media (max-width: 800px) {
+.grid {
+ grid-template-columns: minmax(0, 1fr);
+ }
 
-      h1 {
-        font-size: 2.4rem;
-      }
-    }
-  </style>
+ h1 {
+ font-size: 2.4rem;
+ }
+ }
+ </style>
 </head>
 
 <body>
-  <div class="wrap">
+ <div class="wrap">
 
-    <span class="tag">Graceful Concierge · Powered by Murray Company Limited</span>
+ <span class="tag">Graceful Concierge · Powered by Murray Company Limited</span>
 
-    <h1>Graceful Concierge</h1>
-    <p class="sublead">
-      A human-grade concierge layer on top of your life and business.  
-      Requests in plain language — travel, logistics, projects, and deals — executed with precision.
-    </p>
+ <h1>Graceful Concierge</h1>
+ <p class="sublead">
+ A human-grade concierge layer on top of your life and business. 
+ Requests in plain language — travel, logistics, projects, and deals — executed with precision.
+ </p>
 
-    <div class="grid">
-      <div class="card">
-        <h2>What Graceful Handles</h2>
-        <p>
-          Graceful ties together your schedule, vendors, travel, and projects into one channel.  
-          You send the signal; Graceful routes, tracks, and closes the loop.
-        </p>
+ <div class="grid">
+ <div class="card">
+ <h2>What Graceful Handles</h2>
+ <p>
+ Graceful ties together your schedule, vendors, travel, and projects into one channel. 
+ You send the signal; Graceful routes, tracks, and closes the loop.
+ </p>
 
-        <ul>
-          <li>Travel scouting, routing, and booking support</li>
-          <li>Dining, events, tickets, and experiences</li>
-          <li>Project coordination and follow-through</li>
-          <li>Vendor and contractor wrangling</li>
-          <li>Inbox, calendar, and light ops assist</li>
-        </ul>
+ <ul>
+ <li>Travel scouting, routing, and booking support</li>
+ <li>Dining, events, tickets, and experiences</li>
+ <li>Project coordination and follow-through</li>
+ <li>Vendor and contractor wrangling</li>
+ <li>Inbox, calendar, and light ops assist</li>
+ </ul>
 
-        <div class="btn-row">
-          <a
-            class="btn btn-primary"
-            href="mailto:graceful@murraycompanylimited.com?subject=Graceful%20Concierge%20Intake">
-            Start Intake
-          </a>
+ <div class="btn-row">
+ <a
+ class="btn btn-primary"
+ href="mailto:graceful@murraycompanylimited.com?subject=Graceful%20Concierge%20Intake">
+ Start Intake
+ </a>
 
-          <a class="btn btn-ghost" href="tel:+18883147789">
-            Call Toll-Free Desk
-          </a>
-        </div>
-      </div>
+ <a class="btn btn-ghost" href="tel:+18883147789">
+ Call Toll-Free Desk
+ </a>
+ </div>
+ </div>
 
-      <div class="card">
-        <h2>Signals & Access</h2>
-        <p>
-          One channel, multiple lanes. Your request is treated as a signal and triaged accordingly — personal, business, or family.
-        </p>
+ <div class="card">
+ <h2>Signals & Access</h2>
+ <p>
+ One channel, multiple lanes. Your request is treated as a signal and triaged accordingly — personal, business, or family.
+ </p>
 
-        <div class="contact-block">
-          <div class="label">Primary Email</div>
-          <div>graceful@murraycompanylimited.com</div>
-        </div>
+ <div class="contact-block">
+ <div class="label">Primary Email</div>
+ <div>graceful@murraycompanylimited.com</div>
+ </div>
 
-        <div class="contact-block">
-          <div class="label">Toll-Free Concierge Line</div>
-          <div>+1 (888) 314-7789</div>
-        </div>
+ <div class="contact-block">
+ <div class="label">Toll-Free Concierge Line</div>
+ <div>+1 (888) 314-7789</div>
+ </div>
 
-        <div class="contact-block">
-          <div class="label">Direct Line (Private)</div>
-          <div>+1 (843) 790-2922</div>
-        </div>
+ <div class="contact-block">
+ <div class="label">Direct Line (Private)</div>
+ <div>+1 (843) 790-2922</div>
+ </div>
 
-        <p style="margin-top:1.5rem;">
-          Initial access is by invitation and referral.  
-          Once onboarded, you’ll receive your signal protocol and standard response windows.
-        </p>
-      </div>
-    </div>
+ <p style="margin-top:1.5rem;">
+ Initial access is by invitation and referral. 
+ Once onboarded, you’ll receive your signal protocol and standard response windows.
+ </p>
+ </div>
+ </div>
 
-    <footer>
-      © <script>document.write(new Date().getFullYear());</script>
-      Graceful Concierge · Murray Company Limited  
-      · Private client services. No public offering. All engagements by private agreement only.
-    </footer>
-  </div>
+ <footer>
+ © <script>document.write(new Date().getFullYear());</script>
+ Graceful Concierge · Murray Company Limited 
+ · Private client services. No public offering. All engagements by private agreement only.
+ </footer>
+ </div>
 </body>
 </html>

@@ -1,210 +1,210 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Graceful Concierge</title>
-  <meta name="description" content="Graceful Concierge — intake, coordination, scheduling, and guided access to the Murray Company Limited ecosystem." />
+ <meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <title>Graceful Concierge</title>
+ <meta name="description" content="Graceful Concierge — intake, coordination, scheduling, and guided access to the Murray Company Limited ecosystem." />
 
-  <style>
-    :root{
-      --bg:#020617;            /* Abyss Black */
-      --panel:rgba(255,255,255,.06);
-      --border:rgba(255,255,255,.12);
-      --text:#E5E7EB;          /* Ice White */
-      --muted:rgba(229,231,235,.74);
-      --blue:#38BDF8;          /* Electric Blue */
-      --gold:#FACC15;          /* Signal Gold */
-      --shadow:0 18px 44px rgba(0,0,0,.55);
-    }
+ <style>
+:root{
+ --bg:#020617; /* Abyss Black */
+ --panel:rgba(255,255,255,.06);
+ --border:rgba(255,255,255,.12);
+ --text:#E5E7EB; /* Ice White */
+ --muted:rgba(229,231,235,.74);
+ --blue:#38BDF8; /* Electric Blue */
+ --gold:#FACC15; /* Signal Gold */
+ --shadow:0 18px 44px rgba(0,0,0,.55);
+ }
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      background:radial-gradient(1100px 520px at 18% -10%, rgba(56,189,248,.18), transparent 60%),
-                 radial-gradient(900px 520px at 85% 0%, rgba(250,204,21,.12), transparent 55%),
-                 var(--bg);
-      color:var(--text);
-      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-      line-height:1.55;
-    }
+ *{box-sizing:border-box}
+ body{
+ margin:0;
+ background:radial-gradient(1100px 520px at 18% -10%, rgba(56,189,248,.18), transparent 60%),
+ radial-gradient(900px 520px at 85% 0%, rgba(250,204,21,.12), transparent 55%),
+ var(--bg);
+ color:var(--text);
+ font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+ line-height:1.55;
+ }
 
-    .wrap{max-width:1100px;margin:0 auto;padding:26px 18px 54px}
+.wrap{max-width:1100px;margin:0 auto;padding:26px 18px 54px}
 
-    /* Top Nav */
-    .top{
-      display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
-      padding:14px 16px;border:1px solid rgba(148,163,184,.22);border-radius:18px;
-      background:rgba(2,6,23,.72);backdrop-filter: blur(8px);
-      box-shadow: 0 10px 30px rgba(0,0,0,.35);
-    }
-    .brand{display:flex;flex-direction:column;gap:2px}
-    .brand strong{letter-spacing:.14em;text-transform:uppercase;font-size:.9rem;color:var(--gold)}
-    .brand span{font-size:.95rem;color:var(--muted)}
-    .navlinks{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-    .navlinks a{
-      color:rgba(229,231,235,.9);text-decoration:none;font-weight:800;font-size:.86rem;
-      padding:10px 12px;border-radius:999px;border:1px solid rgba(148,163,184,.22);
-      background:rgba(255,255,255,.03);
-    }
-    .navlinks a:hover{border-color:rgba(229,231,235,.7);background:rgba(255,255,255,.06)}
-    .navlinks a.primary{border-color:rgba(56,189,248,.45);background:rgba(56,189,248,.14);color:var(--text)}
+ /* Top Nav */
+.top{
+ display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+ padding:14px 16px;border:1px solid rgba(148,163,184,.22);border-radius:18px;
+ background:rgba(2,6,23,.72);backdrop-filter: blur(8px);
+ box-shadow: 0 10px 30px rgba(0,0,0,.35);
+ }
+.brand{display:flex;flex-direction:column;gap:2px}
+.brand strong{letter-spacing:.14em;text-transform:uppercase;font-size:.9rem;color:var(--gold)}
+.brand span{font-size:.95rem;color:var(--muted)}
+.navlinks{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.navlinks a{
+ color:rgba(229,231,235,.9);text-decoration:none;font-weight:800;font-size:.86rem;
+ padding:10px 12px;border-radius:999px;border:1px solid rgba(148,163,184,.22);
+ background:rgba(255,255,255,.03);
+ }
+.navlinks a:hover{border-color:rgba(229,231,235,.7);background:rgba(255,255,255,.06)}
+.navlinks a.primary{border-color:rgba(56,189,248,.45);background:rgba(56,189,248,.14);color:var(--text)}
 
-    /* Hero */
-    .hero{margin-top:22px;padding:22px 18px;border-radius:22px;border:1px solid rgba(148,163,184,.22);
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      box-shadow: var(--shadow);
-    }
-    .kicker{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:7px 12px;border-radius:999px;
-      background:rgba(250,204,21,.12);border:1px solid rgba(250,204,21,.32);
-      color:var(--gold);font-weight:900;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;
-    }
-    h1{margin:12px 0 6px;font-size:2.2rem;letter-spacing:-.02em}
-    .sub{margin:0;color:var(--muted);max-width:64ch}
-    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      padding:11px 14px;border-radius:14px;border:1px solid rgba(148,163,184,.22);
-      background:rgba(255,255,255,.04);color:var(--text);
-      text-decoration:none;font-weight:900;font-size:.9rem;
-    }
-    .btn:hover{border-color:rgba(229,231,235,.7);background:rgba(255,255,255,.07)}
-    .btn.primary{border-color:rgba(56,189,248,.45);background:rgba(56,189,248,.16)}
-    .btn.gold{border-color:rgba(250,204,21,.45);background:rgba(250,204,21,.12);color:var(--text)}
-    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;margin-top:14px}
-    @media (max-width: 900px){.grid{grid-template-columns:1fr}}
+ /* Hero */
+.hero{margin-top:22px;padding:22px 18px;border-radius:22px;border:1px solid rgba(148,163,184,.22);
+ background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+ box-shadow: var(--shadow);
+ }
+.kicker{
+ display:inline-flex;align-items:center;gap:10px;
+ padding:7px 12px;border-radius:999px;
+ background:rgba(250,204,21,.12);border:1px solid rgba(250,204,21,.32);
+ color:var(--gold);font-weight:900;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;
+ }
+ h1{margin:12px 0 6px;font-size:2.2rem;letter-spacing:-.02em}
+.sub{margin:0;color:var(--muted);max-width:64ch}
+.ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.btn{
+ display:inline-flex;align-items:center;justify-content:center;gap:10px;
+ padding:11px 14px;border-radius:14px;border:1px solid rgba(148,163,184,.22);
+ background:rgba(255,255,255,.04);color:var(--text);
+ text-decoration:none;font-weight:900;font-size:.9rem;
+ }
+.btn:hover{border-color:rgba(229,231,235,.7);background:rgba(255,255,255,.07)}
+.btn.primary{border-color:rgba(56,189,248,.45);background:rgba(56,189,248,.16)}
+.btn.gold{border-color:rgba(250,204,21,.45);background:rgba(250,204,21,.12);color:var(--text)}
+.grid{display:grid;grid-template-columns:1.2fr.8fr;gap:14px;margin-top:14px}
+ @media (max-width: 900px){.grid{grid-template-columns:1fr}}
 
-    /* Cards */
-    .card{
-      padding:18px;border-radius:18px;background:var(--panel);
-      border:1px solid var(--border);
-    }
-    .card h2{margin:0 0 10px;font-size:1.15rem;color:var(--gold);letter-spacing:.02em}
-    .card p{margin:0 0 10px;color:var(--muted)}
-    .list{margin:0;padding-left:18px;color:rgba(229,231,235,.82)}
-    .list li{margin:8px 0}
+ /* Cards */
+.card{
+ padding:18px;border-radius:18px;background:var(--panel);
+ border:1px solid var(--border);
+ }
+.card h2{margin:0 0 10px;font-size:1.15rem;color:var(--gold);letter-spacing:.02em}
+.card p{margin:0 0 10px;color:var(--muted)}
+.list{margin:0;padding-left:18px;color:rgba(229,231,235,.82)}
+.list li{margin:8px 0}
 
-    /* Form */
-    label{display:block;margin:10px 0 6px;font-weight:900;color:rgba(229,231,235,.9)}
-    input,textarea{
-      width:100%;padding:11px 12px;border-radius:14px;
-      border:1px solid rgba(148,163,184,.22);background:rgba(2,6,23,.55);
-      color:var(--text);outline:none;
-    }
-    input:focus,textarea:focus{border-color:rgba(56,189,248,.65);box-shadow:0 0 0 3px rgba(56,189,248,.12)}
-    textarea{min-height:120px;resize:vertical}
-    .fineprint{margin-top:10px;color:rgba(229,231,235,.55);font-size:.86rem}
-    .footer{margin-top:18px;color:rgba(229,231,235,.55);font-size:.86rem}
+ /* Form */
+ label{display:block;margin:10px 0 6px;font-weight:900;color:rgba(229,231,235,.9)}
+ input,textarea{
+ width:100%;padding:11px 12px;border-radius:14px;
+ border:1px solid rgba(148,163,184,.22);background:rgba(2,6,23,.55);
+ color:var(--text);outline:none;
+ }
+ input:focus,textarea:focus{border-color:rgba(56,189,248,.65);box-shadow:0 0 0 3px rgba(56,189,248,.12)}
+ textarea{min-height:120px;resize:vertical}
+.fineprint{margin-top:10px;color:rgba(229,231,235,.55);font-size:.86rem}
+.footer{margin-top:18px;color:rgba(229,231,235,.55);font-size:.86rem}
 
-    /* Small utility */
-    .chiprow{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .chip{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:8px 10px;border-radius:999px;
-      border:1px solid rgba(148,163,184,.22);background:rgba(255,255,255,.03);
-      color:rgba(229,231,235,.86);font-weight:900;font-size:.82rem;
-    }
-    .dot{width:8px;height:8px;border-radius:999px;background:var(--blue);display:inline-block}
-    .dot.gold{background:var(--gold)}
-  </style>
+ /* Small utility */
+.chiprow{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{
+ display:inline-flex;align-items:center;gap:8px;
+ padding:8px 10px;border-radius:999px;
+ border:1px solid rgba(148,163,184,.22);background:rgba(255,255,255,.03);
+ color:rgba(229,231,235,.86);font-weight:900;font-size:.82rem;
+ }
+.dot{width:8px;height:8px;border-radius:999px;background:var(--blue);display:inline-block}
+.dot.gold{background:var(--gold)}
+ </style>
 </head>
 
 <body>
-  <div class="wrap">
+ <div class="wrap">
 
-    <div class="top">
-      <div class="brand">
-        <strong>Graceful Concierge</strong>
-        <span>Interface layer: intake, coordination, scheduling, guided access.</span>
-      </div>
-      <div class="navlinks">
-        <a href="index.html">Home</a>
-        <a href="nexus.html">Nexus</a>
-        <a href="donniedictionary.html">Donnie Dictionary</a>
-        <a class="primary" href="graceful_concierge.html">Concierge</a>
-        <a href="workwithus.html">Work With Us</a>
-      </div>
-    </div>
+ <div class="top">
+ <div class="brand">
+ <strong>Graceful Concierge</strong>
+ <span>Interface layer: intake, coordination, scheduling, guided access.</span>
+ </div>
+ <div class="navlinks">
+ <a href="index.html">Home</a>
+ <a href="nexus.html">Nexus</a>
+ <a href="donniedictionary.html">Donnie Dictionary</a>
+ <a class="primary" href="graceful_concierge.html">Concierge</a>
+ <a href="workwithus.html">Work With Us</a>
+ </div>
+ </div>
 
-    <section class="hero">
-      <div class="kicker">Graceful · Concierge</div>
-      <h1>High-signal support for real life and real work.</h1>
-      <p class="sub">
-        This is the intake and coordination portal. You tell us the objective; we route the right lane:
-        travel, ops, tech, scheduling, sourcing, and follow-through.
-      </p>
+ <section class="hero">
+ <div class="kicker">Graceful · Concierge</div>
+ <h1>High-signal support for real life and real work.</h1>
+ <p class="sub">
+ This is the intake and coordination portal. You tell us the objective; we route the right lane:
+ travel, ops, tech, scheduling, sourcing, and follow-through.
+ </p>
 
-      <div class="ctaRow">
-        <a class="btn primary" href="#contact">Start a Request</a>
-        <a class="btn gold" href="sms-consent.html">SMS Opt-In</a>
-        <a class="btn" href="privacy.html">Privacy</a>
-        <a class="btn" href="terms.html">Terms</a>
-      </div>
+ <div class="ctaRow">
+ <a class="btn primary" href="#contact">Start a Request</a>
+ <a class="btn gold" href="sms-consent.html">SMS Opt-In</a>
+ <a class="btn" href="privacy.html">Privacy</a>
+ <a class="btn" href="terms.html">Terms</a>
+ </div>
 
-      <div class="chiprow">
-        <span class="chip"><span class="dot"></span>Response discipline</span>
-        <span class="chip"><span class="dot gold"></span>Premium clarity</span>
-        <span class="chip"><span class="dot"></span>One request → one outcome</span>
-      </div>
-    </section>
+ <div class="chiprow">
+ <span class="chip"><span class="dot"></span>Response discipline</span>
+ <span class="chip"><span class="dot gold"></span>Premium clarity</span>
+ <span class="chip"><span class="dot"></span>One request → one outcome</span>
+ </div>
+ </section>
 
-    <div class="grid">
-      <section class="card">
-        <h2>Services</h2>
-        <p>Focused lanes. No fluff. Measurable outcomes.</p>
-        <ul class="list">
-          <li>Travel and event planning (routes, lodging, tickets, timing)</li>
-          <li>Technical assistance (systems, web, automation, device setup)</li>
-          <li>Scheduling and coordination (calls, logistics, follow-ups)</li>
-          <li>Personalized recommendations (tools, vendors, next steps)</li>
-          <li>Support queue triage (what matters now vs later)</li>
-        </ul>
-      </section>
+ <div class="grid">
+ <section class="card">
+ <h2>Services</h2>
+ <p>Focused lanes. No fluff. Measurable outcomes.</p>
+ <ul class="list">
+ <li>Travel and event planning (routes, lodging, tickets, timing)</li>
+ <li>Technical assistance (systems, web, automation, device setup)</li>
+ <li>Scheduling and coordination (calls, logistics, follow-ups)</li>
+ <li>Personalized recommendations (tools, vendors, next steps)</li>
+ <li>Support queue triage (what matters now vs later)</li>
+ </ul>
+ </section>
 
-      <section class="card">
-        <h2>How it works</h2>
-        <p>Keep it simple so execution stays clean.</p>
-        <ul class="list">
-          <li><strong>Step 1:</strong> Submit a request with a clear target.</li>
-          <li><strong>Step 2:</strong> We route to the correct lane.</li>
-          <li><strong>Step 3:</strong> You get a tight plan, then action.</li>
-        </ul>
-        <div class="fineprint">
-          Tip: include deadline, budget range, and “must-have” constraints.
-        </div>
-      </section>
-    </div>
+ <section class="card">
+ <h2>How it works</h2>
+ <p>Keep it simple so execution stays clean.</p>
+ <ul class="list">
+ <li><strong>Step 1:</strong> Submit a request with a clear target.</li>
+ <li><strong>Step 2:</strong> We route to the correct lane.</li>
+ <li><strong>Step 3:</strong> You get a tight plan, then action.</li>
+ </ul>
+ <div class="fineprint">
+ Tip: include deadline, budget range, and “must-have” constraints.
+ </div>
+ </section>
+ </div>
 
-    <section id="contact" class="card" style="margin-top:14px">
-      <h2>Start a Request</h2>
-      <p>Give the objective. We’ll respond with the shortest path to completion.</p>
+ <section id="contact" class="card" style="margin-top:14px">
+ <h2>Start a Request</h2>
+ <p>Give the objective. We’ll respond with the shortest path to completion.</p>
 
-      <!-- Note: static site. This form is a placeholder unless wired to a service. -->
-      <form>
-        <label for="name">Your Name</label>
-        <input id="name" name="name" type="text" placeholder="Name" />
+ <!-- Note: static site. This form is a placeholder unless wired to a service. -->
+ <form>
+ <label for="name">Your Name</label>
+ <input id="name" name="name" type="text" placeholder="Name" />
 
-        <label for="email">Your Email</label>
-        <input id="email" name="email" type="email" placeholder="Email" />
+ <label for="email">Your Email</label>
+ <input id="email" name="email" type="email" placeholder="Email" />
 
-        <label for="message">Your Request</label>
-        <textarea id="message" name="message" placeholder="Objective, deadline, constraints, and any links..."></textarea>
+ <label for="message">Your Request</label>
+ <textarea id="message" name="message" placeholder="Objective, deadline, constraints, and any links..."></textarea>
 
-        <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
-          <button class="btn primary" type="button">Send Request</button>
-          <a class="btn" href="workwithus.html">Join / Collaborate</a>
-        </div>
+ <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+ <button class="btn primary" type="button">Send Request</button>
+ <a class="btn" href="workwithus.html">Join / Collaborate</a>
+ </div>
 
-        <div class="fineprint">
-          This page is static. If you want the form to actually send, I’ll wire it to a service (Formspree / Netlify Forms / your endpoint) in a controlled commit.
-        </div>
-      </form>
+ <div class="fineprint">
+ This page is static. If you want the form to actually send, I’ll wire it to a service (Formspree / Netlify Forms / your endpoint) in a controlled commit.
+ </div>
+ </form>
 
-      <div class="footer">© 2026 Graceful Concierge. All rights reserved.</div>
-    </section>
+ <div class="footer">© 2026 Graceful Concierge. All rights reserved.</div>
+ </section>
 
-  </div>
+ </div>
 </body>
 </html>
