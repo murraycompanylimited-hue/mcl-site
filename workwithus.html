@@ -209,6 +209,11 @@
 
  <h1>Request Access</h1>
 
+<div id="sentBanner" class="card" style="display:none;margin-top:1rem;border:1px solid rgba(250,204,21,.35);background:rgba(250,204,21,.08);">
+  <strong style="color:rgba(250,204,21,.95);">Request received.</strong>
+  <div style="margin-top:.35rem;color:rgba(229,231,235,.85);">We have your submission. If approved, you will receive a reply with next steps.</div>
+</div>
+
 <p>
 Graceful accepts a limited number of engagements. Use this form to request consideration.
 </p>
@@ -305,5 +310,16 @@ Graceful accepts a limited number of engagements. Use this form to request consi
  </footer>
 
  </div>
+<script>
+(function(){
+  try {
+    var p = new URLSearchParams(window.location.search);
+    if (p.get("sent") === "1") {
+      var el = document.getElementById("sentBanner");
+      if (el) el.style.display = "block";
+    }
+  } catch(e) {}
+})();
+</script>
 </body>
 </html>
