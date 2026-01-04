@@ -1,9 +1,33 @@
-<nav class="top-nav">
- <div class="top-nav-left">Murray Company Limited</div>
- <div class="top-nav-right">
- <a href="https://murraycompanylimited.com">Board</a>
- <a href="https://murraycompanylimited.com/about.html">About</a>
- <a href="https://murraycompanylimited.com/work.html">Work With Us</a>
- <a href="https://murraycompanylimited.com#contact">Contact</a>
- </div>
-</nav>
+:root{
+  --signal-gold:#FACC15;
+  --ink:#020617;
+  --ice:#E5E7EB;
+}
+
+/* NAV POLISH */
+.top-nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 28px;
+  background: rgba(2,6,23,.75);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.top-nav-left{
+  font-weight:600;
+  letter-spacing:.4px;
+}
+
+.top-nav-right a{
+  margin-left:22px;
+  font-size:14px;
+  opacity:.85;
+  text-decoration:none;
+}
+
+.top-nav-right a:hover{
+  opacity:1;
+  color: var(--signal-gold);
+}
