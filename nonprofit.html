@@ -6,7 +6,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1" />
  <meta name="description" content="Clan of Murray Human Alliance – a nonprofit lane focused on feeding, housing, and supporting humans under the Golden Rule." />
  <link rel="canonical" href="https://murraycompanylimited.com/nonprofit.html" />
- <link rel="stylesheet" href="css/style.css" />
+ <link rel="stylesheet" href="/css/style.css" />
   <style>
 :root {
  --bg: #050608;
@@ -125,20 +125,24 @@
 </style>
 </head>
 <body>
-  <div id="site-nav"></div>
-  <script>
-    (function(){
-      var host = document.getElementById("site-nav");
-      if(!host) return;
-      fetch("nav.html", { cache: "no-store" })
-        .then(function(r){ return r.text(); })
-        .then(function(html){ host.innerHTML = html; })
-        .catch(function(){
-          host.innerHTML = "<div class=\"wrap\"><div class=\"card\"><a class=\"btn\" href=\"index.html\">Home</a> <a class=\"btn\" href=\"workwithus.html\">Work With Us</a></div></div>";
-        });
-    })();
-  </script>
- <main>
+<nav class="top-nav">
+ <div class="top-nav-left">
+ <a href="index.html" class="brand">Murray Company Limited</a>
+ </div>
+ <div class="top-nav-right">
+ <a href="donniedictionary.html">Donnie Dictionary</a>
+ <a href="graceful_concierge.html">Graceful Concierge</a>
+ <a href="graceful.html">Graceful</a>
+ <a href="phreshglobal.html">Phresh Global</a>
+ <a href="dmjrbankandtrust.html">DMJR Bank &amp; Trust</a>
+ <a href="whitemarket.html">White Market</a>
+ <a href="clanofmurray.html">Clan of Murray</a>
+ <a href="nexus.html">Nexus</a>
+ <a href="workwithus.html">Work With Us</a>
+ <a href="about.html">About</a>
+ </div>
+</nav>
+<main>
  <div id="nav-placeholder"></div>
 
  
