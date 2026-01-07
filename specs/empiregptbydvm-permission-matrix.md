@@ -3,6 +3,13 @@
 ## Rule
 Anything not explicitly allowed is denied.
 
+## Roles (columns)
+- Owner
+- System
+- Admin
+- Operator
+- User
+
 ## Capabilities (rows)
 C1: Read public content
 C2: Read own account/profile
@@ -20,11 +27,7 @@ C13: View system logs (read-only)
 C14: Edit/delete system logs (should be impossible)
 C15: Freeze/disable sessions
 
-## Roles (columns)
-
-
 ## Permissions — User
-
 C1: ALLOW
 C2: ALLOW
 C3: ALLOW
@@ -41,10 +44,7 @@ C13: DENY
 C14: DENY
 C15: DENY
 
-
-
 ## Permissions — Operator
-
 C1: ALLOW
 C2: ALLOW
 C3: DENY
@@ -61,9 +61,7 @@ C13: ALLOW
 C14: DENY
 C15: DENY
 
-
 ## Permissions — Admin
-
 C1: ALLOW
 C2: ALLOW
 C3: DENY
@@ -80,9 +78,7 @@ C13: ALLOW
 C14: DENY
 C15: ALLOW
 
-
 ## Permissions — System
-
 C1: DENY
 C2: DENY
 C3: DENY
@@ -99,9 +95,7 @@ C13: DENY
 C14: DENY
 C15: DENY
 
-
 ## Permissions — Owner
-
 C1: ALLOW
 C2: ALLOW
 C3: DENY
@@ -117,9 +111,3 @@ C12: DENY
 C13: DENY
 C14: DENY
 C15: DENY
-- Owner
-- System
-- Admin
-- Operator
-- User
-
