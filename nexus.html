@@ -1,224 +1,193 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="utf-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1" />
- <title>System Map · Nexus</title>
- <style>
-:root{
- --bg:#020617; --ink:#E5E7EB; --muted:rgba(229,231,235,.72);
- --blue:#38BDF8; --gold:#FACC15;
- --card:rgba(255,255,255,.06); --border:rgba(255,255,255,.12);
- }
- *{box-sizing:border-box}
- body{
- margin:0;
- font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
- background: radial-gradient(1100px 560px at 18% 12%, rgba(56,189,248,.18), transparent 60%),
- radial-gradient(900px 520px at 82% 22%, rgba(250,204,21,.12), transparent 55%),
- var(--bg);
- color:var(--ink);
- }
- a{color:inherit;text-decoration:none}
-.wrap{max-width:1120px;margin:0 auto;padding:22px 18px 60px}
- header{
- display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
- padding:12px 0;margin-bottom:18px;border-bottom:1px solid var(--border);
- }
-.brand{display:flex;flex-direction:column;gap:4px}
-.brand strong{letter-spacing:.6px}
-.brand span{color:var(--muted);font-size:.95rem}
-.nav{display:flex;gap:14px;flex-wrap:wrap}
-.nav a{color:var(--muted)}
-.nav a:hover{color:var(--ink)}
- h1{margin:10px 0 8px;font-size:2.2rem}
-.sub{color:var(--muted);line-height:1.6;margin:0 0 16px}
-.card{
- background:var(--card);
- border:1px solid var(--border);
- border-radius:16px;
- padding:16px;
- box-shadow: 0 10px 24px rgba(0,0,0,.26);
- }
-.map{
- width:100%;
- overflow:auto;
- border:1px solid var(--border);
- border-radius:16px;
- background:rgba(0,0,0,.22);
- padding:14px;
- }
- svg{max-width:100%;height:auto}
-.sline{stroke:rgba(229,231,235,.26);stroke-width:1.2}
-.snode{fill:rgba(255,255,255,.06);stroke:rgba(255,255,255,.18);stroke-width:1.2}
-.snodeBlue{fill:rgba(56,189,248,.10);stroke:rgba(56,189,248,.35)}
-.snodeGold{fill:rgba(250,204,21,.10);stroke:rgba(250,204,21,.35)}
-.stext{fill:rgba(229,231,235,.92);font-size:14px;font-weight:800;letter-spacing:.3px}
-.stext2{fill:rgba(229,231,235,.70);font-size:12px;font-weight:650}
-.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-.btn{
- display:inline-flex;align-items:center;justify-content:center;
- padding:10px 14px;border-radius:12px;border:1px solid var(--border);
- background:rgba(255,255,255,.04);font-weight:800;color:var(--ink)
- }
-.btn:hover{transform:translateY(-1px)}
-.btn.primary{border-color:rgba(56,189,248,.35);background:rgba(56,189,248,.14)}
-.btn.gold{border-color:rgba(250,204,21,.35);background:rgba(250,204,21,.12)}
-.hot{cursor:pointer}
-.hot:hover rect{filter:brightness(1.15)}
-.note{color:rgba(229,231,235,.55);font-size:.92rem;margin-top:10px}
- </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nexus | Murray Company Limited</title>
+
+  <style>
+    :root {
+      --bg-primary: #020617;
+      --border-muted: #1e293b;
+      --text-primary: #e5e7eb;
+      --text-muted: #9ca3af;
+      --accent-gold: #facc15;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border-muted);
+      background: var(--bg-primary);
+    }
+
+    .nav {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .brand strong {
+      font-size: 0.9rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+    }
+
+    .brand span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      margin-left: 1.4rem;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--text-primary);
+      opacity: 0.85;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    .wrap {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 5rem;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+      color: var(--accent-gold);
+    }
+
+    .subhead {
+      font-size: 1.1rem;
+      max-width: 52rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      color: var(--accent-gold);
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 1.1rem;
+      font-size: 1rem;
+      color: var(--text-primary);
+    }
+
+    ul {
+      margin-left: 1.2rem;
+      line-height: 1.65;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .card {
+      padding: 2rem;
+      border-radius: 20px;
+      background: var(--bg-primary);
+      border: 1px solid var(--border-muted);
+      margin-bottom: 2rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-muted);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+  </style>
 </head>
+
 <body>
- <div class="wrap">
- <header>
-<div class="brand">
-<strong>MURRAY COMPANY LIMITED</strong>
-<span>Excellence • Precision • Integrity</span>
-</div>
-<nav class="nav">
-<a href="index.html">Home</a>
-<a href="donniedictionary.html">Donnie Dictionary</a>
-<a href="donniediscount.html">Donnie Discount</a>
-<a href="graceful_concierge.html">Graceful Concierge</a>
-<a href="nexus.html">System Map</a>
-<a href="specs/README.md">Governance</a>
-</nav>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <strong>Murray Company Limited</strong>
+      <span>Excellence · Precision · Integrity</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="donniedictionary.html">Donnie Dictionary</a>
+      <a href="donniediscount.html">Donnie Discount</a>
+      <a href="graceful_concierge.html">Graceful Concierge</a>
+      <a href="phreshglobal.html">Phresh Global</a>
+      <a href="clanofmurray.html">Clan of Murray</a>
+      <a href="workwithus.html">Work With Us</a>
+      <a href="systemmap.html">System Map</a>
+      <a href="nexus.html">Nexus</a>
+    </div>
+  </div>
 </header>
 
- <h1>System Map</h1>
-<div class="mcl-identity-line">1970 — Origin · 2020 — Maturity</div>
-<div class="mcl-identity-line" style="color:#facc15;margin-top:6px;font-size:14px;"><div class="mcl-identity-line" style="color:#facc15;margin-top:6px;font-size:14px;"><div class="mcl-identity-line" style="color:#facc15;margin-top:6px;font-size:14px;"> <p class="sub">
- Click any node. Top layer is Governance + Finance. Middle is Signal + Intake. Right splits into Operating Lanes.
- </p>
+<main class="wrap">
+  <h1>Nexus</h1>
 
- <div class="card">
- <div class="map" aria-label="System map diagram">
- <svg viewBox="0 0 980 560" role="img">
- <!-- governance/finance lines down to index -->
- <line class="sline" x1="200" y1="110" x2="490" y2="170"/>
- <line class="sline" x1="490" y1="110" x2="490" y2="170"/>
- <line class="sline" x1="780" y1="110" x2="490" y2="170"/>
+  <p class="subhead">
+    The central connective reference for Murray Company Limited,
+    linking strategy, systems, and execution without introducing friction.
+  </p>
 
- <!-- index to mid nodes -->
- <line class="sline" x1="490" y1="230" x2="200" y2="320"/>
- <line class="sline" x1="490" y1="230" x2="490" y2="320"/>
- <line class="sline" x1="490" y1="230" x2="780" y2="320"/>
+  <div class="card">
+    <h2>Role</h2>
+    <p>
+      The Nexus functions as a structural overview—clarifying how each
+      initiative relates, interacts, and remains distinct.
+    </p>
+    <ul>
+      <li>System relationships and boundaries</li>
+      <li>Strategic alignment reference</li>
+      <li>Operational clarity without centralization</li>
+    </ul>
+  </div>
 
- <!-- split lane lines -->
- <line class="sline" x1="780" y1="370" x2="670" y2="450"/>
- <line class="sline" x1="780" y1="370" x2="780" y2="450"/>
- <line class="sline" x1="780" y1="370" x2="890" y2="450"/>
+  <div class="card">
+    <h2>Principle</h2>
+    <p>
+      Systems remain autonomous yet interoperable. The Nexus documents
+      connection points without becoming a control layer.
+    </p>
+  </div>
 
- <!-- bottom compliance lines -->
- <line class="sline" x1="200" y1="400" x2="490" y2="520"/>
- <line class="sline" x1="490" y1="400" x2="490" y2="520"/>
- <line class="sline" x1="670" y1="520" x2="490" y2="520"/>
- <line class="sline" x1="780" y1="520" x2="490" y2="520"/>
- <line class="sline" x1="890" y1="520" x2="490" y2="520"/>
+  <footer>
+    © Murray Company Limited. All rights reserved.
+  </footer>
+</main>
 
- <!-- TOP LAYER -->
- <a class="hot" href="bank.html" aria-label="Exec (Governance)">
- <rect class="snodeGold" x="70" y="55" rx="14" ry="14" width="260" height="70"/>
- <text class="stext" x="200" y="88" text-anchor="middle">EXEC</text>
- <text class="stext2" x="200" y="110" text-anchor="middle">Governance / command layer</text>
- </a>
-
- <a class="hot" href="dmjrbankandtrust.html" aria-label="DMJR Bank and Trust (Finance)">
- <rect class="snode" x="350" y="55" rx="14" ry="14" width="280" height="70"/>
- <text class="stext" x="490" y="88" text-anchor="middle">DMJR BANK &amp; TRUST</text>
- <text class="stext2" x="490" y="110" text-anchor="middle">Finance / custody / instruments</text>
- </a>
-
- <a class="hot" href="clanofmurray.html" aria-label="Clan of Murray (Governance Community)">
- <rect class="snode" x="650" y="55" rx="14" ry="14" width="260" height="70"/>
- <text class="stext" x="780" y="88" text-anchor="middle">CLAN OF MURRAY</text>
- <text class="stext2" x="780" y="110" text-anchor="middle">Alliance / mission / people</text>
- </a>
-
- <!-- INDEX HUB -->
- <a class="hot" href="index.html" aria-label="Go to Home (Index)">
- <rect class="snodeGold" x="350" y="170" rx="14" ry="14" width="280" height="70"/>
- <text class="stext" x="490" y="202" text-anchor="middle">INDEX · FRONT DOOR</text>
- <text class="stext2" x="490" y="224" text-anchor="middle">Hub / routing / board</text>
- </a>
-
- <!-- MID NODES -->
- <a class="hot" href="donniedictionary.html" aria-label="Go to Donnie Dictionary">
- <rect class="snodeBlue" x="70" y="300" rx="14" ry="14" width="260" height="90"/>
- <text class="stext" x="200" y="334" text-anchor="middle">DONNIE DICTIONARY</text>
- <text class="stext2" x="200" y="356" text-anchor="middle">Daily word drops / media</text>
- <text class="stext2" x="200" y="378" text-anchor="middle">donniedictionary.html</text>
- </a>
-
- <a class="hot" href="workwithus.html" aria-label="Go to Work With Us">
- <rect class="snodeGold" x="350" y="300" rx="14" ry="14" width="280" height="90"/>
- <text class="stext" x="490" y="334" text-anchor="middle">WORK WITH US</text>
- <text class="stext2" x="490" y="356" text-anchor="middle">Operator / creator intake</text>
- <text class="stext2" x="490" y="378" text-anchor="middle">workwithus.html</text>
- </a>
-
- <rect class="snode" x="650" y="300" rx="14" ry="14" width="260" height="90"/>
- <text class="stext" x="780" y="334" text-anchor="middle">OPERATING LANES</text>
- <text class="stext2" x="780" y="356" text-anchor="middle">WMU / Phresh / </text>
- <text class="stext2" x="780" y="378" text-anchor="middle">split below</text>
-
- <!-- SPLIT LANES -->
- <a class="hot" href="whitemarket.html" aria-label="White Market Unlimited">
- <rect class="snode" x="560" y="445" rx="14" ry="14" width="220" height="70"/>
- <text class="stext" x="670" y="475" text-anchor="middle">WHITE MARKET</text>
- <text class="stext2" x="670" y="497" text-anchor="middle">whitemarket.html</text>
- </a>
-
- <a class="hot" href="phreshglobal.html" aria-label="Phresh Global">
- <rect class="snode" x="670" y="445" rx="14" ry="14" width="220" height="70"/>
- <text class="stext" x="780" y="475" text-anchor="middle">PHRESH GLOBAL</text>
- <text class="stext2" x="780" y="497" text-anchor="middle">phreshglobal.html</text>
- </a>
-
- <rect class="snode" x="780" y="445" rx="14" ry="14" width="220" height="70"/>
- <text class="stext" x="890" y="475" text-anchor="middle"></text>
- </a>
-
- <!-- COMPLIANCE -->
- <a class="hot" href="terms.html" aria-label="Terms (Compliance and Consent)">
- <rect class="snode" x="210" y="515" rx="14" ry="14" width="560" height="40"/>
- <text class="stext" x="490" y="542" text-anchor="middle">COMPLIANCE + CONSENT · terms · privacy · sms-consent</text>
- </a>
- </svg>
- </div>
-
- <div class="btnrow">
- <a class="btn primary" href="donniedictionary.html">Donnie Dictionary</a>
- <a class="btn gold" href="workwithus.html">Work With Us</a>
- <a class="btn" href="bank.html">Bank</a>
- <a class="btn" href="dmjrbankandtrust.html">DMJR Bank &amp; Trust</a>
- <a class="btn" href="clanofmurray.html">Clan of Murray</a>
- <a class="btn" href="whitemarket.html">White Market</a>
- <a class="btn" href="phreshglobal.html">Phresh Global</a>
- <a class="btn" href="terms.html">Terms</a>
- <a class="btn" href="privacy.html">Privacy</a>
- <a class="btn" href="sms-consent.html">SMS Consent</a>
- </div>
-
- <div class="note">
- </div>
- </div>
- </div>
- <section class="card">
- <h2>Interface</h2>
- <p>
- Graceful Concierge is the human-facing interface to the Murray Company Limited system:
- intake, coordination, scheduling, and guided access to each lane.
- </p>
- <div class="btnrow">
- <a class="btn" href="graceful_concierge.html">Enter Graceful Concierge</a>
- <a class="btn" href="sms-consent.html">SMS Opt-In</a>
- </div>
- </section>
-
-
-
-<footer class="wrap"><div class="small" style="text-align:center;opacity:.8">1970 — Origin · 2020 — Maturity</div></footer>
 </body>
 </html>
+
