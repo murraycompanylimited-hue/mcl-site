@@ -1,268 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
   <title>Murray Company Limited</title>
-
-  <style>
-    :root {
-      --bg-primary: #020617;
-      --border-muted: #1e293b;
-      --text-primary: #e5e7eb;
-      --text-muted: #9ca3af;
-      --accent-gold: #facc15;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg-primary);
-      color: var(--text-primary);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    }
-
-    header {
-      border-bottom: 1px solid var(--border-muted);
-      background: var(--bg-primary);
-    }
-
-    .nav {
-      max-width: 1150px;
-      margin: 0 auto;
-      padding: 1.2rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .brand {
-      display: flex;
-      flex-direction: column;
-      gap: 0.15rem;
-    }
-
-    .brand strong {
-      font-size: 0.9rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--accent-gold);
-    }
-
-    .brand span {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .nav-links a {
-      margin-left: 1.4rem;
-      font-size: 0.9rem;
-      text-decoration: none;
-      color: var(--text-primary);
-      opacity: 0.85;
-    }
-
-    .nav-links a:hover {
-      opacity: 1;
-      text-decoration: underline;
-    }
-
-    .wrap {
-      max-width: 1150px;
-      margin: 0 auto;
-      padding: 4rem 1.5rem 5rem;
-    }
-
-    h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-bottom: 0.75rem;
-      color: var(--accent-gold);
-    }
-
-    .subhead {
-      font-size: 1.1rem;
-      max-width: 46rem;
-      line-height: 1.7;
-      color: var(--text-muted);
-      margin-bottom: 2.5rem;
-    }
-
-    .btn-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 3rem;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.9rem 1.9rem;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.85rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      border: 1px solid transparent;
-      transition: 0.2s;
-    }
-
-    .btn-primary {
-      background: var(--accent-gold);
-      color: var(--bg-primary);
-    }
-
-    .btn-primary:hover {
-      background: #fde047;
-      transform: translateY(-1px);
-    }
-
-    .btn-ghost {
-      background: transparent;
-      color: var(--text-primary);
-      border-color: var(--border-muted);
-    }
-
-    .btn-ghost:hover {
-      border-color: var(--accent-gold);
-      transform: translateY(-1px);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
-      gap: 2rem;
-    }
-
-    .card {
-      padding: 2rem;
-      border-radius: 20px;
-      background: var(--bg-primary);
-      border: 1px solid var(--border-muted);
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: var(--accent-gold);
-    }
-
-    p {
-      line-height: 1.7;
-      margin-bottom: 1.1rem;
-      font-size: 1rem;
-      color: var(--text-primary);
-    }
-
-    ul {
-      margin-left: 1.2rem;
-      line-height: 1.65;
-      font-size: 0.95rem;
-      color: var(--text-muted);
-    }
-
-    footer {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border-muted);
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    @media (max-width: 860px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      h1 {
-        font-size: 2.4rem;
-      }
-
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav-links a {
-        margin-left: 0;
-        margin-right: 1rem;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
 <body>
 
-<header>
-  <div class="nav">
-    <div class="brand">
-      <strong>Murray Company Limited</strong>
-      <span>Excellence · Precision · Integrity</span>
-    </div>
+<h1>MURRAY COMPANY LIMITED</h1>
+<h3>Practical services. Quiet systems. Real operations.</h3>
 
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="donniedictionary.html">Donnie Dictionary</a>
-      <a href="donniediscount.html">Donnie Discount</a>
-      <a href="graceful_concierge.html">Graceful Concierge</a>
-      <a href="nexus.html">System Map</a>
-      <a href="specs/README.md">Governance</a>
-    </div>
-  </div>
-</header>
+<p>
+Murray Company Limited builds and operates small, focused service lines designed to reduce friction,
+improve continuity, and support everyday commerce.
+</p>
 
-<main class="wrap">
-  <h1>Murray Company Limited</h1>
+<p>
+We prioritize clarity, restraint, and usefulness over noise.
+</p>
 
-  <p class="subhead">
-    A private design and systems studio focused on lawful structure,
-    disciplined execution, and long-horizon value creation.
-  </p>
+<h2>Active Services</h2>
 
-  <div class="btn-row">
-    <a class="btn btn-primary" href="workwithus.html">Inquire</a>
-    <a class="btn btn-ghost" href="nexus.html">System Map</a>
-  </div>
+<h3>Graceful Concierge</h3>
+<p>
+A call and inquiry continuity service that ensures messages are acknowledged and routed
+when staff are unavailable or busy.
+</p>
+<p>
+<a href="graceful-concierge.html">Learn more → Graceful Concierge</a>
+</p>
 
-  <div class="grid">
-    <div class="card">
-      <h2>What We Build</h2>
-      <p>
-        We design and maintain interconnected systems spanning identity,
-        digital infrastructure, governance logic, and operational clarity.
-      </p>
-      <ul>
-        <li>Brand and digital presence</li>
-        <li>Operational systems and workflows</li>
-        <li>Private structures and documentation</li>
-      </ul>
-    </div>
+<h3>Donnie Discount Lane</h3>
+<p>
+A practical value channel focused on industrial and construction supply opportunities.
+</p>
+<p>
+<a href="donnie-discount-lane.html">Visit Donnie Discount Lane</a>
+</p>
 
-    <div class="card">
-      <h2>How We Operate</h2>
-      <p>
-        Precision over noise. Structure over speculation. Long-term thinking
-        applied with calm execution.
-      </p>
-      <ul>
-        <li>Clear boundaries</li>
-        <li>Minimal surface area</li>
-        <li>Repeatable systems</li>
-      </ul>
-    </div>
-  </div>
+<h2>General Inquiries</h2>
+<p>
+<strong>+1 888 314 7789</strong>
+</p>
 
-  <footer>
-    © Murray Company Limited. All rights reserved.
-  </footer>
-</main>
+<footer>
+  <p>A privately operated company.</p>
+  <p>© 2026 Murray Company Limited. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
+
 
