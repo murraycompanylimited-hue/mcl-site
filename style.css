@@ -1,0 +1,77 @@
+/* =========================
+   MCL Global Theme
+   ========================= */
+
+:root {
+  /* Core palette — replace values only */
+  --bg-primary: #ffffff;
+  --text-primary: #111111;
+  --text-secondary: #444444;
+  --accent-primary: #000000;
+  --accent-muted: #777777;
+  --border-light: #e5e5e5;
+}
+
+/* =========================
+   Base Reset
+   ========================= */
+
+body {
+  margin: 0;
+  padding: 3rem 2rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* =========================
+   Typography
+   ========================= */
+
+h1 {
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+h2 {
+  margin-top: 3rem;
+  font-weight: 500;
+}
+
+h3 {
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+p, li {
+  max-width: 720px;
+}
+
+/* =========================
+   Links
+   ========================= */
+
+a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-light);
+}
+
+a:hover {
+  border-bottom-color: var(--accent-primary);
+}
+
+/* =========================
+   Footer
+   ========================= */
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-light);
+  color: var(--accent-muted);
+  font-size: 0.9rem;
+}
+
