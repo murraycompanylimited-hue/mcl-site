@@ -1,15 +1,15 @@
 /* =========================
    MCL Global Theme
    ========================= */
-
 :root {
-  /* Core palette — replace values only */
-  --bg-primary: #ffffff;
-  --text-primary: #111111;
-  --text-secondary: #444444;
-  --accent-primary: #000000;
-  --accent-muted: #777777;
-  --border-light: #e5e5e5;
+  /* MCL restrained neutral palette */
+  --bg-primary: #f8f8f8;        /* soft off-white */
+  --text-primary: #1a1a1a;      /* near-black, not harsh */
+  --text-secondary: #5a5a5a;    /* muted gray */
+  --accent-primary: #2a2a2a;    /* quiet emphasis */
+  --accent-muted: #8a8a8a;      /* low-contrast detail */
+  --border-light: #e0e0e0;      /* subtle separation */
+}
 }
 
 /* =========================
